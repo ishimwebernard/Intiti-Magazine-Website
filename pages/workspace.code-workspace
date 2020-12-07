@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "assets",
+			"path": "C:\\Users\\ISHIMWE\\Desktop\\assets"
+		},
+		{
+			"name": "Intiti-Magazine-Website",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Intiti-Magazine-Website"
+	}
+}
