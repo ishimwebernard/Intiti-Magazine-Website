@@ -3,6 +3,7 @@
     padding: 0;
     font-family: Open Sans;
     font-size: 16px;
+    overflow-x: hidden;
 }
 .content{
     width: 100%;
@@ -69,7 +70,7 @@
    display: grid;
    grid-template-columns: 1fr 1fr;
    padding-left: 2.5%;
-   width: 90%;
+   width: 96%;
    margin-right: 2.5%;
 }
 .row3 .mainArticle{
@@ -235,6 +236,7 @@ box-shadow:  8px 8px 16px #ebebeb,
     width: 100%;
     height: 9rem;
     border: none;
+
 }
 .row5 .news-sports-section .news-au-pair .news-card{
     margin-left: 5%;
@@ -267,14 +269,15 @@ box-shadow:  5px 5px 10px #e8e8e8,
 
 }
 .row5 .advert-zone{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 10%;
+    margin-top: 6rem;
 }
 .row5 .advert-zone img{
-    -webkit-user-select: none;
-    margin: auto;
-    background: url('../assets/Ads/Africa-Improved-Food-1.gif')
+    width: 98%;
+    height: 98%;
+    margin-top: .5rem;
 }
 
 
@@ -290,7 +293,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
 }
 .row6 .intro-container{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 .row6 .intro-container .col1 h1{
     font-size: 2rem;
