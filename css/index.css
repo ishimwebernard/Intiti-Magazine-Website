@@ -97,6 +97,67 @@
 }
 
 
+
+
+
+.row5 .news-sports-section .news-au-sixth{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 25rem;
+    margin-top: 3rem;
+}
+
+.row5 .news-sports-section .news-au-sixth:nth-child(1){
+    margin-top: 2rem;
+    display: none;
+}
+
+
+
+ .news-au-sixth .news-image{
+    width: 100%;
+    height: 100%;
+}
+.news-au-sixth .news-card{
+    background: #ffffff;
+box-shadow:  8px 8px 16px #ebebeb, 
+             -8px -8px 16px #ffffff;
+ margin-left: .5rem;        
+ display: grid;
+ height: 90%;
+ grid-template-rows: 2fr 1fr;   
+ cursor: pointer; 
+}
+.news-au-sixth .news-card:hover .news-image{
+    opacity: 60%;
+
+}
+ .news-au-sixth .news-card:hover{
+    background: #eeeeee;
+}
+
+ .news-au-sixth .news-card .other{
+    padding: 5%;
+}
+
+
+ .news-au-sixth .news-card .bookname{
+    padding: 0;
+    width: 100%;
+    margin:0;
+    font-weight: 600;
+}
+ .news-au-sixth .news-card .bookdescription{
+    padding: 0;
+    width: 100%;
+    margin:0;
+    opacity: 60%;
+}
+
+
+
+
+
 .row3 .floater{
     background: #000;
     opacity: 65%;
@@ -113,12 +174,56 @@
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
+.row5 .latestnews{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 6rem;
+}
+.row5 .latestnews h2{
+    padding: 1rem;
+    background:rgb(218, 218, 218);
+}
+.row5 .latestnews p{
+    padding: 1rem;
+    border-left: 4px #D52A31 solid;
+    margin-top: .1rem;
+    color: #fff;
+    background: linear-gradient(180deg, rgb(49, 49, 49), rgb(17, 17, 17));
+    font-weight: 600;
+    text-shadow: .9px .9px rgb(156, 156, 156);
+    cursor: pointer;
+}
+.row5 .latestnews p:hover{
+    background: linear-gradient(180deg, #158dce, #0C4B6E);
+    color: #fff;
+}
+.row5 .mainLNews{
+    height: 400px;
+    background: url('../assets/images/sample-slideshow.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.row5 .mainLNews p{
+    /* margin-top: 32.85%; */
+    font-weight: 600;
+    background: #000;
+    color: #fff;
+    opacity: 80%;
+    padding: .5rem;
+    top: 1rem;
+
+}
+
+
+
+
 .row5 .news-sports-section .section-header{
     color: #535353;
     font-size: 2rem;
     margin-top: 3rem;
     border-bottom:7px #D52A31 solid;
-    width: 15%;
 
 }
 .row5 .news-sports-section .news-au-pair{
@@ -161,21 +266,27 @@ box-shadow:  5px 5px 10px #e8e8e8,
     border-bottom:7px #629CB5 solid;
 
 }
-
+.row5 .advert-zone{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 .row5 .advert-zone img{
-    width: 90%;
-    margin-left: 10%;
+    -webkit-user-select: none;
+    margin: auto;
+    background: url('../assets/Ads/Africa-Improved-Food-1.gif')
 }
 
 
 .row6{
     width: 100%;
     margin-top: 3rem;
-    height: 20.875rem;
+    /* height: 20.875rem; */
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 1.5%;
     background: linear-gradient(45deg, #93B3D2, #D89EE2);
+    padding-bottom: 3%;
 }
 .row6 .intro-container{
     display: grid;
@@ -193,33 +304,26 @@ box-shadow:  5px 5px 10px #e8e8e8,
 .row6 .intro-container .col2 p{
     cursor: pointer;
 }
-.row6 .videos-container{
-    display: flex;
-    flex-direction: row;
-    height: 50%;
-    margin-top: 3rem;
+.row6 .video-cluster{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-.row6 .videos-container .video-card{
-    width: 20.388379204893%;
-    margin-left: 2.5%;
-
+.row6 .video-cluster .video{
+    width: 92%;
 }
-.row6 .videos-container .video-card img{
-    width: 100%;
-    height: 100%;
+.row6 .video-cluster .video p{
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
-.row6 .videos-container .video-card p{
-    font-weight: 600;
-color: #fff;
-font-size: 1.2rem;
-opacity: 70%;
+.row6 .video-cluster .video img{
+   background: url('../assets/images/sample-slideshow.png');
+   width: 100%;
+
 }
 
 
-.row6 .videos-container .video-card:nth-child(1){
-    margin-left: 0;
-}
+
 
 .footer{
     background: #0C4B6E;
