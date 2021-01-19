@@ -74,7 +74,6 @@
    margin-right: 2.5%;
 }
 .row3 .mainArticle{
-    background-image: url("../assets/images/sample-slideshow.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 96%;
@@ -92,11 +91,22 @@
 .row3 .secondaryItems .secondaryRow .secArticle{
     height: 150px;
     width: 95%;
-    background-image: url("../assets/images/sample-slideshow.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.row3 .secondaryItems .secondaryRow .secArticle .title{
+    background: linear-gradient(180deg, rgb(121, 121, 121),transparent);
+    color: #fff;
+    font-weight: 700;
+    padding: .5rem;
+}
+.row3 .mainArticle h3{
+    background: linear-gradient(180deg, rgb(121, 121, 121), transparent);
+    color: #fff;
+    font-weight: 700;
+    padding: .5rem;
+}
 
 
 
@@ -201,7 +211,6 @@ box-shadow:  8px 8px 16px #ebebeb,
 }
 .row5 .mainLNews{
     height: 400px;
-    background: url('../assets/images/sample-slideshow.png');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -244,7 +253,8 @@ box-shadow:  8px 8px 16px #ebebeb,
     background: #ffffff;
 box-shadow:  5px 5px 10px #e8e8e8, 
              5px -5px 10px #ffffff;
-     padding-bottom: 1rem;        
+     padding-bottom: 1rem;      
+     margin-bottom: 1rem;    
 }
 
 .row5 .news-sports-section .news-au-pair .news-card:hover img{
@@ -273,10 +283,11 @@ box-shadow:  5px 5px 10px #e8e8e8,
     grid-template-rows: 1fr 1fr;
     padding-left: 10%;
     margin-top: 6rem;
+    height: 90%;
 }
 .row5 .advert-zone img{
     width: 98%;
-    height: 98%;
+    height: 95%;
     margin-top: .5rem;
 }
 
