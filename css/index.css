@@ -113,7 +113,10 @@
 
 
 
+.row5 .news-sports-section{
+    overflow-y: hidden;
 
+} 
 .row5 .news-sports-section .news-au-sixth{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -187,6 +190,7 @@ box-shadow:  8px 8px 16px #ebebeb,
     grid-template-columns: 3fr 1fr;
     margin-left: 2.5%;
     margin-right: 2.5%;
+    overflow-y: hidden;
 }
 .row5 .latestnews{
     display: flex;
@@ -368,3 +372,25 @@ box-shadow:  5px 5px 10px #e8e8e8,
     height: 1.5rem;
     padding-right: .5rem;
 }
+#loader{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 90%;
+
+}
+#loader p{
+    position: fixed;
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 700;
+    top: 50%;
+    font-size: 2rem;
+    left: 45%;
+}
+
+
