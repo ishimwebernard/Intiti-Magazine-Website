@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Open Sans;
+    font-family: "Ubuntu", sans-serif;
     font-size: 16px;
     overflow-x: hidden;
 }
@@ -77,6 +77,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 96%;
+    border-radius: .5rem;
 }
 
 .row3 .secondaryItems{
@@ -87,12 +88,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: .5rem;
+    border-radius: .5rem;
 }
 .row3 .secondaryItems .secondaryRow .secArticle{
     height: 150px;
     width: 95%;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: .5rem;
 }
 
 .row3 .secondaryItems .secondaryRow .secArticle .title{
@@ -233,7 +236,7 @@ box-shadow:  8px 8px 16px #ebebeb,
     color: #535353;
     font-size: 2rem;
     margin-top: 3rem;
-    border-bottom:7px #D52A31 solid;
+    border-bottom:1px #a5a5a5 solid;
 
 }
 .row5 .news-sports-section .news-au-pair{
@@ -250,11 +253,12 @@ box-shadow:  8px 8px 16px #ebebeb,
 .row5 .news-sports-section .news-au-pair .news-card{
     margin-left: 5%;
     cursor: pointer;
-    background: #ffffff;
+    background: #f1f1f1;
 box-shadow:  5px 5px 10px #e8e8e8, 
              5px -5px 10px #ffffff;
      padding-bottom: 1rem;      
-     margin-bottom: 1rem;    
+     margin-bottom: 1rem;  
+     border-radius: .5rem;  
 }
 
 .row5 .news-sports-section .news-au-pair .news-card:hover img{
@@ -275,7 +279,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
     margin-right: .5rem;
 }
 #sports-header{
-    border-bottom:7px #629CB5 solid;
+    border-bottom:1px #a5a5a5 solid;
 
 }
 .row5 .advert-zone{

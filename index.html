@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <title>Intiti Magazine</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">    <title>Intiti Magazine</title>
 </head>
 
 <body>
@@ -481,22 +480,38 @@
            </div>
            <div class="secondaryItems">
                <div class="secondaryRow">
-                   <div class="secArticle" style="background-image: url('${allPresenters[1].Picture}');">
+                   <div class="secArticle" onclick="openNewsWindow('${allPresenters[1].Body}', 
+                   '${allPresenters[1].Date}',
+                   '${allPresenters[1].Picture}',  
+                   '${allPresenters[1].Title}',
+                   '${allPresenters[1].Writer}',  )" style="background-image: url('${allPresenters[1].Picture}');">
                     
                        <p class="title">${allPresenters[1].Title}</p>
                        <p class="tag"></p>
                    </div>
-                   <div class="secArticle" style="background-image: url('${allPresenters[2].Picture}');">
+                   <div class="secArticle"  onclick="openNewsWindow('${allPresenters[2].Body}', 
+                   '${allPresenters[2].Date}',
+                   '${allPresenters[2].Picture}',  
+                   '${allPresenters[2].Title}',
+                   '${allPresenters[2].Writer}',  )" style="background-image: url('${allPresenters[2].Picture}');">
                     <p class="title">${allPresenters[2].Title}</p>
                     <p class="tag"></p>
                 </div>
                </div>
                <div class="secondaryRow">
-                <div class="secArticle" style="background-image: url('${allPresenters[3].Picture}');">
+                <div class="secArticle"  onclick="openNewsWindow('${allPresenters[3].Body}', 
+                   '${allPresenters[3].Date}',
+                   '${allPresenters[3].Picture}',  
+                   '${allPresenters[3].Title}',
+                   '${allPresenters[3].Writer}',  )" style="background-image: url('${allPresenters[3].Picture}');">
                     <p class="title">${allPresenters[3].Title}</p>
                     <p class="tag"></p>
                 </div>
-                <div class="secArticle" style="background-image: url('${allPresenters[4].Picture}');">
+                <div class="secArticle"  onclick="openNewsWindow('${allPresenters[4].Body}', 
+                   '${allPresenters[4].Date}',
+                   '${allPresenters[4].Picture}',  
+                   '${allPresenters[4].Title}',
+                   '${allPresenters[4].Writer}',  )" style="background-image: url('${allPresenters[4].Picture}');">
                  <p class="title">${allPresenters[4].Title}</p>
                  <p class="tag"></p>
              </div>
@@ -522,7 +537,11 @@
                     var SLICED = String(doc.data().Body).slice(0, 70);
                     if (MINIMUMNUMBER < 3) {
                         news.innerHTML += `
-                <div class="news-card">
+                <div class="news-card" onclick="openNewsWindow('${doc.data().Body}',
+                '${doc.data().Date}', 
+                '${doc.data().Picture}',
+                '${doc.data().Title}',
+                '${doc.data().Writer}',)">
                         <img src="${doc.data().Picture}" alt="" class="news-image">
                         <p class="news-header">${doc.data().Title}</p>
                         <p class="news-content">
@@ -534,6 +553,10 @@
                     MINIMUMNUMBER += 1;
                 })
             })
+        }
+
+        function openNewsWindow(){
+            
         }
     </script>
 </body>
