@@ -4,9 +4,191 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="preconnect" href="https://fonts.gstatic.com">
- <link rel="stylesheet" href="../../css/indexRender.css">
  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet"> <title>Intiti Magazine</title>
  <title>Document</title>
+ <style>
+     *{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+
+}
+
+
+/* row for adverts */
+
+.row1{
+    display: flex;
+    flex-direction: row;
+}
+/* Row with LOGO and navigation bar */
+.row2{
+    display: flex;
+    flex-direction: row;
+    background: url("../../assets/images/imigongo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.row2 img{
+    padding:0;
+    margin:0;
+    width: 15.3%;
+    margin-left: 1.97584097859327%;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.row2 .navbar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 3.96941896024465%;
+    margin-top: 1.45259938837921%;
+    margin-bottom: 1.45259938837921%;
+    width: 100%;
+}
+
+.row2 .navbar p{
+    margin-left: 2.67584097859327%;
+    font-weight: 700;
+    height: 100%;
+    color: #535353;
+    cursor: pointer;
+    border: 4px transparent
+}
+
+/* Microsoft Like Hover */
+.row2 .navbar p:hover{
+    border-bottom: 2px #535353 dashed;
+}
+
+
+.row2 .navbar p:first-child{
+    border-bottom: 4px #D52A31 solid;
+}
+.row3{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+.row3 .main{
+    display: flex;
+    flex-direction: column;
+}
+.row3 .main h1{
+    font-size: 3rem;
+    opacity: 70%;
+}
+.row3 .main .details{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.row3 .main .details .writer{
+    font-weight: 700;
+
+}
+.row3 .main .details .dateWritten{
+    font-size: .8rem;
+    opacity: 50%;
+}
+.row3 .main img{
+    width: 80%;
+    height: 500px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+
+.row3 .advert{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 10%;
+    margin-top: 6rem;
+    height: 50rem;
+}
+.row3 .advert img{
+    width: 98%;
+    height: 95%;
+    margin-top: .5rem;
+}
+
+.row5 .news-au-pair{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.row5 .news-au-pair .news-card img{
+    width: 100%;
+    height: 9rem;
+    border: none;
+
+}
+.row5  .news-au-pair .news-card{
+    margin-left: 5%;
+    cursor: pointer;
+    background: #f1f1f1;
+box-shadow:  5px 5px 10px #e8e8e8, 
+             5px -5px 10px #ffffff;
+     padding-bottom: 1rem;      
+     margin-bottom: 1rem;  
+     border-radius: .5rem;  
+}
+
+.row5  .news-au-pair .news-card:hover img{
+    opacity: 80%;
+}
+
+
+.row5  .news-au-pair .news-card .news-header{
+    font-weight: 700;
+    color: #0C4B6E;
+    font-size: 1.2rem;
+    margin: .5rem;
+}
+
+.row5  .news-au-pair .news-card .news-content{
+    color: #535353;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.footer{
+    background: #0C4B6E;
+    display: grid;
+    padding: 3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 3rem;
+}
+.footer .footer-item p{
+    font-size: 1rem;
+    color: #fff;
+}
+.footer .footer-item{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.footer .footer-group h2{
+    color: #fff;
+    font-size: 2rem;
+}
+.footer .footer-item img{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-right: .5rem;
+}
+
+ </style>
 </head>
 <body>
  <div class="content">
@@ -51,7 +233,7 @@
  <div class="row5">
  <div class="news-au-pair">
  <div class="news-card">
- <img src="./assets/images/sample-slideshow.png" alt="" class="news-image">
+ <img src="../../assets/images/sample-slideshow.png" alt="" class="news-image">
  <p class="news-header">News Header</p>
  <p class="news-content">
  Sed pretium efficitur nulla, at euismod urna lacinia imperdiet. Quisque cursus tempus elit
@@ -59,7 +241,7 @@
  </p>
  </div>
  <div class="news-card">
- <img src="./assets/images/sample-slideshow.png" alt="" class="news-image">
+ <img src="../../assets/images/sample-slideshow.png" alt="" class="news-image">
  <p class="news-header">News Header</p>
  <p class="news-content">
  Sed pretium efficitur nulla, at euismod urna lacinia imperdiet. Quisque cursus tempus elit
@@ -67,7 +249,7 @@
  </p>
  </div>
  <div class="news-card">
- <img src="./assets/images/sample-slideshow.png" alt="" class="news-image">
+ <img src="../../assets/images/sample-slideshow.png" alt="" class="news-image">
  <p class="news-header">News Header</p>
  <p class="news-content">
  Sed pretium efficitur nulla, at euismod urna lacinia imperdiet. Quisque cursus tempus elit
@@ -79,7 +261,7 @@
  </div>
  <div class="news-au-pair">
  <div class="news-card">
- <img src="./assets/images/sample-slideshow.png" alt="" class="news-image">
+ <img src="../../assets/images/sample-slideshow.png" alt="" class="news-image">
  <p class="news-header">News Header</p>
  <p class="news-content">
  Sed pretium efficitur nulla, at euismod urna lacinia imperdiet. Quisque cursus tempus elit
@@ -87,7 +269,7 @@
  </p>
  </div>
  <div class="news-card">
- <img src="./assets/images/sample-slideshow.png" alt="" class="news-image">
+ <img src="../../assets/images/sample-slideshow.png" alt="" class="news-image">
  <p class="news-header">News Header</p>
  <p class="news-content">
  Sed pretium efficitur nulla, at euismod urna lacinia imperdiet. Quisque cursus tempus elit
@@ -95,7 +277,7 @@
  </p>
  </div>
  <div class="news-card">
- <img src="./assets/images/sample-slideshow.png" alt="" class="news-image">
+ <img src="../../assets/images/sample-slideshow.png" alt="" class="news-image">
  <p class="news-header">News Header</p>
  <p class="news-content">
  Sed pretium efficitur nulla, at euismod urna lacinia imperdiet. Quisque cursus tempus elit
@@ -127,7 +309,7 @@
  <div class="footer-group">
  <h2>Working hours</h2>
  <div class="footer-item">
- <img src="/assets/images/clock.png" alt="" class="footer-image">
+ <img src="../../assets/images/clock.png" alt="" class="footer-image">
  <p class="footer-detail">8:00AM-8:00PM</p>
  </div>
 
@@ -136,19 +318,19 @@
  <div class="footer-group">
  <h2>Our Services</h2>
  <div class="footer-item">
- <img src="assets/images/circle.png" alt="" class="footer-image">
+ <img src="../../assets/images/circle.png" alt="" class="footer-image">
  <p class="footer-detail">Web design and development</p>
  </div>
  <div class="footer-item">
- <img src="assets/images/circle.png" alt="" class="footer-image">
+ <img src="../../assets/images/circle.png" alt="" class="footer-image">
  <p class="footer-detail">Software development</p>
  </div>
  <div class="footer-item">
- <img src="assets/images/circle.png" alt="" class="footer-image">
+ <img src="../../assets/images/circle.png" alt="" class="footer-image">
  <p class="footer-detail">Graphics design</p>
  </div>
  <div class="footer-item">
- <img src="assets/images/circle.png" alt="" class="footer-image">
+ <img src="../../assets/images/circle.png" alt="" class="footer-image">
  <p class="footer-detail">Elaboration Strategy</p>
  </div>
  </div>
