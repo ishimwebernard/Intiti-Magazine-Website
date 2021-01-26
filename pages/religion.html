@@ -35,16 +35,16 @@
             </div>
         </div>
         <div class="row3">
-            <p>Technology is the leading way to improve life</p>
+            <p>The greatest religion is to be true to your own nature. Have faith in yourselves.</p>
         </div>
         <div class="row5">
             <div class="news-sports-section">
-                <h3 class="section-header" id="news-header">International economy</h3>
+                <h3 class="section-header" id="news-header">Religion News</h3>
 
                 <div class="news-au-pair" id="business">
 
                 </div>
-                <h3 class="section-header" id="sports-header">Local economy</h3>
+                <h3 class="section-header" id="sports-header">Further reading</h3>
 
                 <div class="news-au-pair">
                     <div class="news-card">
@@ -241,7 +241,7 @@
             loader.style.display = "block";
             let MINIMUMNUMBER = 0;
             var mainDocument = document.getElementById('business');
-            db.collection('business').get().then((qSnapShot) => {
+            db.collection('religion').get().then((qSnapShot) => {
                 qSnapShot.forEach((doc) => {
                     console.log(doc.data());
                     var SLICED = String(doc.data().Body).slice(0, 70);

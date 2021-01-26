@@ -62,11 +62,11 @@
 }
 
 
-.row2 .navbar p:first-child{
-    border-bottom: 4px #D52A31 solid;
+.row2 .navbar p:nth-child(6){
+    color:  #D52A31 ;
 }
 .row3{
-    background-image: url('https://news.cgtn.com/news/2020-11-02/Analysis-China-is-betting-on-science-and-tech-like-never-before-V68V871ula/img/871ca9ce8b9941088260b6ed4ced4eeb/871ca9ce8b9941088260b6ed4ced4eeb.jpeg');
+    background-image: url('https://www.pewresearch.org/wp-content/uploads/2020/03/FT_20.03.10_whoComesToMind_featured.png');
     height: 200px;
     width: 100%;
     background-size: cover;
