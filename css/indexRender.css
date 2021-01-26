@@ -79,6 +79,10 @@
     font-size: 3rem;
     opacity: 70%;
 }
+.row3 h2{ 
+    font-size: 1.3rem;
+    display: none;
+}
 .row3 .main .details{
     display: grid;
     grid-template-rows: 1fr 1fr;

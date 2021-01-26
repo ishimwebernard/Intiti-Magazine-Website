@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+
+}
+
+
+/* row for adverts */
+
+.row1{
+    display: flex;
+    flex-direction: row;
+}
+/* Row with LOGO and navigation bar */
+.row2{
+    display: flex;
+    flex-direction: row;
+    background: url("../assets/images/imigongo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.row2 img{
+    padding:0;
+    margin:0;
+    width: 15.3%;
+    margin-left: 1.97584097859327%;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.row2 .navbar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 3.96941896024465%;
+    margin-top: 1.45259938837921%;
+    margin-bottom: 1.45259938837921%;
+    width: 100%;
+}
+
+.row2 .navbar p{
+    margin-left: 2.67584097859327%;
+    font-weight: 700;
+    height: 100%;
+    color: #535353;
+    cursor: pointer;
+    border: 4px transparent
+}
+
+/* Microsoft Like Hover */
+.row2 .navbar p:hover{
+    border-bottom: 2px #535353 dashed;
+}
+
+
+.row2 .navbar p:first-child{
+    border-bottom: 4px #D52A31 solid;
+}
+.row3{
+    background-image: url('https://www.esa.int//var/esa/storage/images/about_us/business_with_esa/business_opportunities/19716978-3-eng-GB/Business_Opportunities_pillars.jpg');
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 50px;
+}
+.row3 p{
+    width: 50%;
+    background: rgba(31, 30, 30, 0.1);
+    backdrop-filter: blur(20px);
+    height: 100%;
+    font-size: 3rem;
+    color: #fff;
+    margin-left: auto;
+    border-radius: 2px;;
+}
+
+.row5 .news-sports-section{
+    overflow-y: hidden;
+
+} 
+.row5 .news-sports-section .news-au-sixth{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 25rem;
+    margin-top: 3rem;
+}
+
+.row5 .news-sports-section .news-au-sixth:nth-child(1){
+    margin-top: 2rem;
+    display: none;
+}
+
+
+
+ .news-au-sixth .news-image{
+    width: 100%;
+    height: 100%;
+}
+.news-au-sixth .news-card{
+    background: #ffffff;
+box-shadow:  8px 8px 16px #ebebeb, 
+             -8px -8px 16px #ffffff;
+ margin-left: .5rem;        
+ display: grid;
+ height: 90%;
+ grid-template-rows: 2fr 1fr;   
+ cursor: pointer; 
+}
+.news-au-sixth .news-card:hover .news-image{
+    opacity: 60%;
+
+}
+ .news-au-sixth .news-card:hover{
+    background: #eeeeee;
+}
+
+ .news-au-sixth .news-card .other{
+    padding: 5%;
+}
+
+
+ .news-au-sixth .news-card .bookname{
+    padding: 0;
+    width: 100%;
+    margin:0;
+    font-weight: 600;
+}
+ .news-au-sixth .news-card .bookdescription{
+    padding: 0;
+    width: 100%;
+    margin:0;
+    opacity: 60%;
+}
+
+
+
+
+
+.row3 .floater{
+    background: #000;
+    opacity: 65%;
+    padding: 1%;
+}
+.row3 .floater p{
+    color: #fff;
+    font-size: 2rem;
+    opacity: 1;
+}
+.row5{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    overflow-y: hidden;
+}
+.row5 .latestnews{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 6rem;
+}
+.row5 .latestnews h2{
+    padding: 1rem;
+    background:rgb(218, 218, 218);
+}
+.row5 .latestnews p{
+    padding: 1rem;
+    border-left: 4px #D52A31 solid;
+    margin-top: .1rem;
+    color: #fff;
+    background: linear-gradient(180deg, rgb(49, 49, 49), rgb(17, 17, 17));
+    font-weight: 600;
+    text-shadow: .9px .9px rgb(156, 156, 156);
+    cursor: pointer;
+}
+.row5 .latestnews p:hover{
+    background: linear-gradient(180deg, #158dce, #0C4B6E);
+    color: #fff;
+}
+.row5 .mainLNews{
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.row5 .mainLNews p{
+    /* margin-top: 32.85%; */
+    font-weight: 600;
+    background: #000;
+    color: #fff;
+    opacity: 80%;
+    padding: .5rem;
+    top: 1rem;
+
+}
+
+
+
+
+.row5 .news-sports-section .section-header{
+    color: #535353;
+    font-size: 2rem;
+    margin-top: 3rem;
+    border-bottom:1px #a5a5a5 solid;
+
+}
+.row5 .news-sports-section .news-au-pair{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.row5 .news-sports-section .news-au-pair .news-card img{
+    width: 100%;
+    height: 9rem;
+    border: none;
+
+}
+.row5 .news-sports-section .news-au-pair .news-card{
+    margin-left: 5%;
+    cursor: pointer;
+    background: #f1f1f1;
+box-shadow:  5px 5px 10px #e8e8e8, 
+             5px -5px 10px #ffffff;
+     padding-bottom: 1rem;      
+     margin-bottom: 1rem;  
+     border-radius: .5rem;  
+}
+
+.row5 .news-sports-section .news-au-pair .news-card:hover img{
+    opacity: 80%;
+}
+
+
+.row5 .news-sports-section .news-au-pair .news-card .news-header{
+    font-weight: 700;
+    color: #0C4B6E;
+    font-size: 1.2rem;
+    margin: .5rem;
+}
+
+.row5 .news-sports-section .news-au-pair .news-card .news-content{
+    color: #535353;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+#sports-header{
+    border-bottom:1px #a5a5a5 solid;
+
+}
+.row5 .advert-zone{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 10%;
+    margin-top: 6rem;
+    height: 90%;
+}
+.row5 .advert-zone img{
+    width: 98%;
+    height: 95%;
+    margin-top: .5rem;
+}
+
+
+
+.footer{
+    background: #0C4B6E;
+    display: grid;
+    padding: 3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 3rem;
+}
+.footer .footer-item p{
+    font-size: 1rem;
+    color: #fff;
+}
+.footer .footer-item{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.footer .footer-group h2{
+    color: #fff;
+    font-size: 2rem;
+}
+.footer .footer-item img{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-right: .5rem;
+}
+#loader{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 90%;
+
+}
+#loader p{
+    position: fixed;
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 700;
+    top: 50%;
+    font-size: 2rem;
+    left: 45%;
+}
