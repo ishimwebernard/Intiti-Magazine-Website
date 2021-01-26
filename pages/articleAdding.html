@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        background: linear-gradient(180deg, rgb(85, 85, 85), rgb(26, 26, 26));
+        color: #fff;
+        width: 10%;
+        font-weight: 700;
+        font-size: 2rem;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+    .r{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        margin-top: 10px;
+    }
+    input{
+        padding: 5px;
+    }
+    .loader{
+        position: absolute;
+        background: url('../assets/Animee/35.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+        vertical-align: center;
+        margin-left: 40%;
+        margin-top: 10%;
+        padding: 10px;
+        opacity: 80%;
+        border-radius: 10px;
+        display: none;
+    
+    }
+    .loader p{
+        color: #fff;
+        font-weight: 700;
+        font-size: 3rem;
+        color: #000;
+      
+    }
+</style>
+<body>
+    <div class="content">
+        <div class="loader" id="loader">
+            <p id="ldng">Loading ...</p>
+        </div>
+        <p>Article Addition Wizard</p>
+        <div class="r">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="Input the title of the article">
+        </div>
+        <div class="r">
+            <label for="body">Body of the article</label>
+            <textarea name="" id="body" cols="30" rows="10"></textarea>
+        </div>
+        <div class="r">
+            <label for="writer">Writer name</label>
+            <input type="text" id="writer" placeholder="Writer">
+        </div>
+       <div class="r">
+           <label for="typeOfArticle">Type of Article</label>
+           <select id="typeOfArticle">
+            <option value="business">Business</option>
+            <option value="tech">Tech</option>
+            <option value="culture">Culture</option>
+            <option value="religion">Religion</option>
+          </select>
+       </div>
+       <div class="r">
+           <label for="file">Picture</label>
+           <input type="file" id="file" accept="image/png, image/jpeg">
+       </div>
+       <button onclick="uploadArticle()">Finish</button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script>
+          var firebaseConfig = {
+            apiKey: "AIzaSyAOpZpH9ezHk78KeIfVD0J98Nyyf_sFK70",
+            authDomain: "intiti-website.firebaseapp.com",
+            projectId: "intiti-website",
+            storageBucket: "intiti-website.appspot.com",
+            messagingSenderId: "620651830390",
+            appId: "1:620651830390:web:f03da58ecc2a69c99f1357",
+            measurementId: "G-LPTBMTEGLD"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+       
+
+        
+
+        function uploadArticle() {
+            let loader = document.getElementById('loader');
+            loader.style.display = 'block';
+        let title = document.getElementById('title').value;
+        let body = document.getElementById('body').value;
+        let writer = document.getElementById('writer').value;
+        let section = document.getElementById('typeOfArticle').value;
+            var storageRef = firebase.storage().ref();
+            var toDay = new Date();
+            var userStorageRef = storageRef.child('m'+toDay);
+            const selectedFile = document.getElementById('file').files[0];
+            userStorageRef.put(selectedFile).then(function(snapshot) {
+
+                const fileDirectory = snapshot.ref.getDownloadURL().then(url=>{
+                    let newUrl = String(url);
+                    let trimedTitle = String(title).replace(' ', '_');
+                    firebase.firestore().collection(`${section}`).doc(`${trimedTitle}`).set({
+                        "Title": `${title}`,
+                        "Picture": `${newUrl}`,
+                        "Body": `${body}`,
+                        "Writer": `${writer}`,
+                        "_Date": toDay
+
+                    }).then(()=>{
+                        loader.style.display = 'none';
+                    });
+                });
+            });
+            
+        }
+    </script>
+</body>
+</html>

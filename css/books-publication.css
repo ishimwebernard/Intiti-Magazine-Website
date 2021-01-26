@@ -54,14 +54,9 @@
     border: 4px transparent
 }
 
-/* Microsoft Like Hover */
-.row2 .navbar p:hover{
-    border-bottom: 2px #535353 dashed;
-}
-
 
 .row2 .navbar p:nth-last-child(8){
-    border-bottom: 4px #D52A31 solid;
+    color: #D52A31;
 }
 
 

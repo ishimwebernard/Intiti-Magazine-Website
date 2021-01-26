@@ -62,8 +62,8 @@
 }
 
 
-.row2 .navbar p:first-child{
-    border-bottom: 4px #D52A31 solid;
+.row2 .navbar p:nth-child(3){
+    color: #D52A31;
 }
 .row3{
     background-image: url('https://www.esa.int//var/esa/storage/images/about_us/business_with_esa/business_opportunities/19716978-3-eng-GB/Business_Opportunities_pillars.jpg');

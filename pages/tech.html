@@ -241,7 +241,7 @@
             loader.style.display = "block";
             let MINIMUMNUMBER = 0;
             var mainDocument = document.getElementById('business');
-            db.collection('business').get().then((qSnapShot) => {
+            db.collection('tech').get().then((qSnapShot) => {
                 qSnapShot.forEach((doc) => {
                     console.log(doc.data());
                     var SLICED = String(doc.data().Body).slice(0, 70);
