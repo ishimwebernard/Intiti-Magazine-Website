@@ -21,7 +21,7 @@
 .row2{
     display: flex;
     flex-direction: row;
-    background: url("../assets/images/imigongo.png");
+    background: url("https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/imigongo.png?alt=media&token=db0b4bc9-d91c-42d9-ac65-12d74b81fbec");
     background-size: cover;
     background-repeat: no-repeat;
 }
