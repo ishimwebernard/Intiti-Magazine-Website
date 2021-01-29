@@ -16,6 +16,7 @@
 .row1{
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 /* Row with LOGO and navigation bar */
 .row2{
@@ -24,6 +25,7 @@
     background: url("https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/imigongo.png?alt=media&token=db0b4bc9-d91c-42d9-ac65-12d74b81fbec");
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
 }
 .row2 img{
     padding:0;

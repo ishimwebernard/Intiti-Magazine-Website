@@ -56,14 +56,9 @@
     border: 4px transparent
 }
 
-/* Microsoft Like Hover */
-.row2 .navbar p:hover{
-    border-bottom: 2px #535353 dashed;
-}
 
-
-.row2 .navbar p:first-child{
-    border-bottom: 4px #D52A31 solid;
+.row2 .navbar p:nth-child(5){
+    color: #D52A31;
 }
 .row3{
     background-image: url('../assets/images/culture.png');
