@@ -27,7 +27,7 @@
         }).catch((error) => {
             console.log(error);
         });
-        loadMainArticle();
+        // loadMainArticle();
 
         function loadMainArticle() {
             var row3 = document.getElementById('row3');
@@ -95,20 +95,20 @@
             console.log('Setting background ...');
         }
 
-        loadAnySection();
+      loadAnySection();
 
         function loadAnySection() {
             loader.style.display = "block";
             let MINIMUMNUMBER = 0;
-            var mainDocument = document.getElementById('news');
-            db.collection('news').get().then((qSnapShot) => {
+            var mainDocument = document.getElementById('business');
+            db.collection('culture').get().then((qSnapShot) => {
                 qSnapShot.forEach((doc) => {
                     console.log(doc.data());
                     var SLICED = String(doc.data().Body).slice(0, 70);
                     if (MINIMUMNUMBER < 3) {
-                        news.innerHTML += `
+                        mainDocument.innerHTML += `
                 <div class="news-card" onclick="ONW('${doc.data().Body}',
-                '${doc.data().Date}', 
+                '${doc.data()._Date}', 
                 '${doc.data().Picture}',
                 '${doc.data().Title}',
                 '${doc.data().Writer}',)">
@@ -128,7 +128,7 @@
             
         }
 function ONW(Body, _date, Picture, Title,Writer){
-    fetch('./pages/Templates/articleRender.html').then(response=> response.text()).then((data)=>{
+    fetch('../pages/Templates/articleRender.html').then(response=> response.text()).then((data)=>{
         let s = data.toString().replace('{{Body}}', Body).replace('{{Title}}', Title).replace('{{Picture}}', Picture).replace('{{Date}}', _date).replace('{{Writer}}', Writer);
         document.open();
         document.write(s);
