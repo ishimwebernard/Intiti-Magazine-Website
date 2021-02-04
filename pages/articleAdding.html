@@ -126,7 +126,7 @@
                 const fileDirectory = snapshot.ref.getDownloadURL().then(url=>{
                     let newUrl = String(url);
                     let trimedTitle = String(title).replace(' ', '_');
-                    firebase.firestore().collection(`${section}`).doc(`${trimedTitle}`).set({
+                    firebase.firestore().collection(`${section}`).add({
                         "Title": `${title}`,
                         "Picture": `${newUrl}`,
                         "Body": `${body}`,
