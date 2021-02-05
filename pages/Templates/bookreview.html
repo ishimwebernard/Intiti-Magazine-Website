@@ -129,7 +129,113 @@
         }
         .main .col2 h1{
             font-size: 3rem;
+            color:rgb(35, 82, 134);
         }
+        .main .col2 .bookAuthorName{
+            margin-top: 10px;
+            color:rgb(35, 82, 134);
+        }
+        .main .col2 .seeAllVeersions{
+            font-size: 1rem;
+            font-style: italic;
+            margin-top: 10px;
+            cursor: pointer;
+            
+        }
+        .main .col2 .seeAllVeersions:hover{
+            text-decoration: underline;
+        }
+        .main .col2 .bookVersions{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 20px;
+            
+
+        }
+        .main .col2 .bookVersions .bookVersion{
+            width: 90%;
+            border: 1px rgb(35, 82, 134) solid;
+            background: rgb(237, 241, 243);
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .main .col2 .bookVersions .bookVersion:hover{
+            background: rgb(215, 227, 233);
+        }
+        .main .col2 .bookDetails{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            margin-top: 40px;
+        }
+        .main .col2 .bookDetails .bookDetail .indicator{
+            font-weight: 700;
+            color:rgb(35, 82, 134);
+        }
+        .main .col2 .bookDetails .bookDetail .value{
+            font-weight: 700;
+        }
+        .main .col2 .aboutThisBook{
+            font-weight: 700;
+            margin-top: 20px;
+        }
+        .main .col2 .sampleDesc{
+            margin: 10px;
+            color: rgb(128, 128, 128);
+            border-left: 5px rgb(35, 82, 134) solid;
+            padding-left: 20px;
+        }
+        .main .col3 .saleDetails{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 5px;
+            border-bottom: 1px rgb(221, 221, 221) solid;
+        }
+        .main .col3 .saleDetails .indicator{
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: rgb(88, 88, 88);
+        }
+        .main .col3 .saleDetails .value{
+            color: #D52A31;
+            font-style: italic;
+         
+
+        }
+        .main .col3 button{
+            width: 100%;
+            background: linear-gradient(180deg, rgb(67, 128, 199),rgb(35, 82, 134));
+            color: #fff;
+            margin-top: 20px;
+        }
+        .otherbooks .others{
+            display: flex;
+            flex-direction: row;
+        }
+        .otherbooks .others .news-card{
+            width: 20%;
+            height: 450px;
+        }
+        .otherbooks .others .news-card img{
+            height: 80%;
+            width: 100%;
+        }
+        .otherbooks .others .news-card .informations .start-rating{
+            display: flex;
+            flex-direction: row;
+        }
+        .otherbooks .others .news-card .informations .start-rating img{
+            
+        }
+       
+
+
+
+
+
+       
+
+
        
 
 
@@ -204,59 +310,84 @@
             </div>
             <div class="col2">
                 <h1>The body: Place for Occupants</h1>
-                <p class="bookAuthorName">by<span>Mike Bryson</span></p>
+                <p class="bookAuthorName">by <span>Mike Bryson</span></p>
                 <div class="rating">
                     <!--Some images of rating-->
                 </div>
-              <p class="seeAllVeersions">See all versions of the book</p>
+              <p class="seeAllVeersions">>See all versions of the book</p>
               <div class="bookVersions">
                   <div class="bookVersion">
-                      <h3 class="versionTitle">Paper version</h3>
+                      <h3 class="versionTitle">PDF version</h3>
                       <p class="versionPrice">1500 Frw</p>
                   </div>
+                  <div class="bookVersion">
+                    <h3 class="versionTitle">Paper version</h3>
+                    <p class="versionPrice">1500 Frw</p>
+                </div>
+               
               </div>
+              <p class="aboutThisBook">About this book</p>
+              <p class="sampleDesc">meticulous recovery of Malcolm’s youth adds a new dimension to Malcolm’s less familiar 'origins story'....By giving a second life to a historical Malcolm, Les Payne’s timely biography illustrates something really important. It reminds us that those making history often do so by having the courage and conviction to act in spite of their limitations; their legacy can survive and continue to inspire even the deconstruction of the myths we build around them or the ones they construct themselves</p>
               <div class="bookDetails">
                   <div class="bookDetail">
                       <P class="indicator">Print size</P>
-                      <img src="https://m.media-amazon.com/images/I/51LMZBNahWL.jpg" alt="">
+                      <img src="../../assets/images/printsize.png" alt="">
                       <p class="value">1000 Pages</p>
                   </div>
                   <div class="bookDetail">
                     <P class="indicator">Language</P>
-                    <img src="https://m.media-amazon.com/images/I/51LMZBNahWL.jpg" alt="">
+                    <img src="../../assets/images/lang.png" alt="">
                     <p class="value">English</p>
                 </div>
                 <div class="bookDetail">
                     <P class="indicator">Publisher</P>
-                    <img src="https://m.media-amazon.com/images/I/51LMZBNahWL.jpg" alt="">
+                    <img src="../../assets/images/publish.png" alt="">
                     <p class="value">Intiti Magazine</p>
                 </div>
                 <div class="bookDetail">
                     <P class="indicator">Publish date</P>
-                    <img src="https://m.media-amazon.com/images/I/51LMZBNahWL.jpg" alt="">
+                    <img src="../../assets/images/date.png" alt="">
                     <p class="value">1-1-2006</p>
                 </div>
                 <div class="bookDetail">
                     <P class="indicator">File size</P>
-                    <img src="https://m.media-amazon.com/images/I/51LMZBNahWL.jpg" alt="">
+                    <img src="../../assets/images/file.png" alt="">
                     <p class="value">1600 Kb</p>
                 </div>
               </div>
             </div>
             <div class="col3">
                 <div class="saleDetails">
-                    <p class="indicator">Live paper</p>
+                    <p class="indicator">PDF</p>
                     <p class="value">125 Frw</p>
                 </div>
                 <div class="saleDetails">
                     <p class="indicator">Live paper</p>
                     <p class="value">125 Frw</p>
                 </div>
-                <div class="saleDetails">
-                    <p class="indicator">Live paper</p>
-                    <p class="value">125 Frw</p>
-                </div>
+             
                 <button class="specialButton">Purchase Book</button>
+            </div>
+        </div>
+        <div class="otherbooks">
+            <p class="otherbooksinthestore">Other books</p>
+            <div class="others">
+                <div class="news-card">
+                    <img src="/assets/images/intiti-article.jpg" alt="" class="news-image">
+                    
+                    <div class="informations">
+                        <p class="bookname">Rwanda and Agriculture</p>
+                    <p class="bookdescription">Business</p>
+                        <div class="start-rating">
+                            <img src="../../assets/images/star-shaded.png" alt="">
+                            <img src="../../assets/images/star-shaded.png" alt="">
+                            <img src="../../assets/images/star-shaded.png" alt="">
+                            <img src="../../assets/images/star-shaded.png" alt="">
+                            <img src="../../assets/images/star-shaded.png" alt="">
+                        </div>
+                    </div>
+                   
+                </div>
             </div>
         </div>
 
