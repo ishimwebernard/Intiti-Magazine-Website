@@ -199,8 +199,6 @@
         .main .col3 .saleDetails .value{
             color: #D52A31;
             font-style: italic;
-         
-
         }
         .main .col3 button{
             width: 100%;
@@ -208,16 +206,24 @@
             color: #fff;
             margin-top: 20px;
         }
+        .fullOtherBooks{
+            display: grid;
+            grid-template-columns: 3.5fr 1fr;
+        }
         .otherbooks .others{
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 10px;
         }
         .otherbooks .others .news-card{
-            width: 20%;
-            height: 450px;
+            background: rgb(240, 240, 240);
+            padding-bottom: 10%;
+            border-radius: 10px;
+            width: 95%;
+            margin-top: 10px;
         }
         .otherbooks .others .news-card img{
-            height: 80%;
+            height: 250px;
             width: 100%;
         }
         .otherbooks .others .news-card .informations .start-rating{
@@ -225,19 +231,22 @@
             flex-direction: row;
         }
         .otherbooks .others .news-card .informations .start-rating img{
-            
+            height: 20px;
+            width: 20px;
         }
-       
-
-
-
-
-
-       
-
-
-       
-
+        .otherbooks .others .news-card .informations .bookname{
+            font-weight: 600;
+           
+        }
+        .otherbooks .otherbooksinthestore{
+            font-weight: 700;
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+        .fullOtherBooks .animee img{
+            height: 350px;
+            width: 90%;
+        }
 
         .footer {
             background: #0C4B6E;
@@ -297,20 +306,20 @@
         </div>
         <div class="main">
             <div class="col1">
-                <img src="https://m.media-amazon.com/images/I/51LMZBNahWL.jpg" alt="">
+                <img src="{{Picture}}" alt="">
                 <h3>Follow the author</h3>
                 <div class="authorCredentials">
                     <div class="imageHolder">
-                        <img src="https://m.media-amazon.com/images/I/51LMZBNahWL.jpg" alt="" class="authorProfilePic">
+                        <img src="{{AuthorPicture}}" alt="" class="authorProfilePic">
 
                     </div>
-                    <p class="authorName">Mike Bryson</p>
+                    <p class="authorName">{{AuthorName}}</p>
                 </div>
                 <button class="overallButton">Info</button>
             </div>
             <div class="col2">
-                <h1>The body: Place for Occupants</h1>
-                <p class="bookAuthorName">by <span>Mike Bryson</span></p>
+                <h1>{{Title}}</h1>
+                <p class="bookAuthorName">by <span>{{AuthorName}}</span></p>
                 <div class="rating">
                     <!--Some images of rating-->
                 </div>
@@ -318,16 +327,16 @@
               <div class="bookVersions">
                   <div class="bookVersion">
                       <h3 class="versionTitle">PDF version</h3>
-                      <p class="versionPrice">1500 Frw</p>
+                      <p class="versionPrice">{{PDFPrice}}</p>
                   </div>
                   <div class="bookVersion">
                     <h3 class="versionTitle">Paper version</h3>
-                    <p class="versionPrice">1500 Frw</p>
+                    <p class="versionPrice">{{PapersPrice}}</p>
                 </div>
                
               </div>
               <p class="aboutThisBook">About this book</p>
-              <p class="sampleDesc">meticulous recovery of Malcolm’s youth adds a new dimension to Malcolm’s less familiar 'origins story'....By giving a second life to a historical Malcolm, Les Payne’s timely biography illustrates something really important. It reminds us that those making history often do so by having the courage and conviction to act in spite of their limitations; their legacy can survive and continue to inspire even the deconstruction of the myths we build around them or the ones they construct themselves</p>
+              <p class="sampleDesc">{{AboutThisBook}}</p>
               <div class="bookDetails">
                   <div class="bookDetail">
                       <P class="indicator">Print size</P>
@@ -337,57 +346,163 @@
                   <div class="bookDetail">
                     <P class="indicator">Language</P>
                     <img src="../../assets/images/lang.png" alt="">
-                    <p class="value">English</p>
+                    <p class="value">{{Language}}</p>
                 </div>
                 <div class="bookDetail">
                     <P class="indicator">Publisher</P>
                     <img src="../../assets/images/publish.png" alt="">
-                    <p class="value">Intiti Magazine</p>
+                    <p class="value">{{Publisher}}</p>
                 </div>
                 <div class="bookDetail">
                     <P class="indicator">Publish date</P>
                     <img src="../../assets/images/date.png" alt="">
-                    <p class="value">1-1-2006</p>
+                    <p class="value">{{DatePublished}}</p>
                 </div>
                 <div class="bookDetail">
                     <P class="indicator">File size</P>
                     <img src="../../assets/images/file.png" alt="">
-                    <p class="value">1600 Kb</p>
+                    <p class="value">{{FileSize}} KB</p>
                 </div>
               </div>
             </div>
             <div class="col3">
                 <div class="saleDetails">
                     <p class="indicator">PDF</p>
-                    <p class="value">125 Frw</p>
+                    <p class="value">{{PDFPrice}}</p>
                 </div>
                 <div class="saleDetails">
                     <p class="indicator">Live paper</p>
-                    <p class="value">125 Frw</p>
+                    <p class="value">{{PapersPrice}}</p>
                 </div>
              
-                <button class="specialButton">Purchase Book</button>
+                <button class="specialButton" onclick="{{onclickCommand}}">Purchase Book</button>
             </div>
         </div>
-        <div class="otherbooks">
-            <p class="otherbooksinthestore">Other books</p>
-            <div class="others">
-                <div class="news-card">
-                    <img src="/assets/images/intiti-article.jpg" alt="" class="news-image">
-                    
-                    <div class="informations">
-                        <p class="bookname">Rwanda and Agriculture</p>
-                    <p class="bookdescription">Business</p>
-                        <div class="start-rating">
-                            <img src="../../assets/images/star-shaded.png" alt="">
-                            <img src="../../assets/images/star-shaded.png" alt="">
-                            <img src="../../assets/images/star-shaded.png" alt="">
-                            <img src="../../assets/images/star-shaded.png" alt="">
-                            <img src="../../assets/images/star-shaded.png" alt="">
+        <div class="fullOtherBooks">
+            <div class="otherbooks">
+                <p class="otherbooksinthestore">Readers also liked</p>
+                <div class="others">
+                    <div class="news-card">
+                        <img src="/assets/images/intiti-article.jpg" alt="" class="news-image">
+                        
+                        <div class="informations">
+                            <p class="bookname">Rwanda and Agriculture</p>
+                        <p class="bookdescription">Business</p>
+                            <div class="start-rating">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                            </div>
                         </div>
+                       
                     </div>
-                   
+                    <div class="news-card">
+                        <img src="/assets/images/intiti-article.jpg" alt="" class="news-image">
+                        
+                        <div class="informations">
+                            <p class="bookname">Rwanda and Agriculture</p>
+                        <p class="bookdescription">Business</p>
+                            <div class="start-rating">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="news-card">
+                        <img src="/assets/images/intiti-article.jpg" alt="" class="news-image">
+                        
+                        <div class="informations">
+                            <p class="bookname">Rwanda and Agriculture</p>
+                        <p class="bookdescription">Business</p>
+                            <div class="start-rating">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="news-card">
+                        <img src="/assets/images/intiti-article.jpg" alt="" class="news-image">
+                        
+                        <div class="informations">
+                            <p class="bookname">Rwanda and Agriculture</p>
+                        <p class="bookdescription">Business</p>
+                            <div class="start-rating">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="news-card">
+                        <img src="/assets/images/intiti-article.jpg" alt="" class="news-image">
+                        
+                        <div class="informations">
+                            <p class="bookname">Rwanda and Agriculture</p>
+                        <p class="bookdescription">Business</p>
+                            <div class="start-rating">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="news-card">
+                        <img src="/assets/images/intiti-article.jpg" alt="" class="news-image">
+                        
+                        <div class="informations">
+                            <p class="bookname">Rwanda and Agriculture</p>
+                        <p class="bookdescription">Business</p>
+                            <div class="start-rating">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="news-card">
+                        <img src="/assets/images/intiti-article.jpg" alt="" class="news-image">
+                        
+                        <div class="informations">
+                            <p class="bookname">Rwanda and Agriculture</p>
+                        <p class="bookdescription">Business</p>
+                            <div class="start-rating">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                                <img src="../../assets/images/star-shaded.png" alt="">
+                            </div>
+                        </div>
+                       
                 </div>
+           
+                 
+
+                </div>
+            </div>
+            <div class="animee">
+                <img src="../../assets/Animee/Africa-Improved-Food-1.gif" alt="">
+                <img src="../../assets/Animee/Heineken_-1.gif" alt="">
+              
             </div>
         </div>
 
