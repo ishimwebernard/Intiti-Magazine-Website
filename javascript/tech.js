@@ -105,7 +105,7 @@
                 qSnapShot.forEach((doc) => {
                     console.log(doc.data());
                     var SLICED = String(doc.data().Body).slice(0, 70);
-                    if (MINIMUMNUMBER < 3) {
+           
                         mainDocument.innerHTML += `
                 <div class="news-card" onclick="ONW('${doc.data().Body}',
                 '${doc.data()._Date}', 
@@ -119,8 +119,7 @@
                         </p>
                     </div>
                 `;
-                    }
-                    MINIMUMNUMBER += 1;
+                    
                 })
             }).then(()=>{
                 loader.style.display = "none";
