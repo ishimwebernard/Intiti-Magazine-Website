@@ -36,9 +36,28 @@
             background: linear-gradient(1801deg,rgb(172, 172, 172), rgb(224, 224, 224));
         }
         .row1 {
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
+        .row1 img{
+            object-fit: cover;
+            width: 100%;
+        }
+        #floaterMadeInRwanda{
+            position: fixed;
+            height: 100px;
+            width: 5.5%;
+            margin-left: 92.5%;
+            display: none;
+            animation-name: YAMAHA_ANIMEE;
+            animation-duration: 1s;
+
+        }
+        @keyframes YAMAHA_ANIMEE{
+            from{margin-left: 0%;}
+            to{margin-left: 92.5%;}
+        }
+        
 
         /* Row with LOGO and navigation bar */
         .row2 {
@@ -282,12 +301,11 @@
 
 <body>
     <div class="content">
+        <img class="advert" id="floaterMadeInRwanda"
+        src="../../assets/images/madeInRwanda.png">
         <div class="row1">
-            <img class="advert"
-                src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/Intro02-1.gif?alt=media&token=f5996b4b-6c60-45c3-a56c-1bd05004ecc7">
-            <img class="advert"
-                src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/Intro01-1%20(1).gif?alt=media&token=784db2b4-dd7d-4470-8511-0949ba3fa187">
-
+            <img  src="../../assets/images/intiti-white.png">
+            <img  src="../../assets/images/intiti-blue.png">
         </div>
         <div class="row2">
 
@@ -562,6 +580,7 @@
             </div>
         </div>
     </div>
+    <script src="../../javascript/bookreview.js"></script>
 </body>
 
 </html>

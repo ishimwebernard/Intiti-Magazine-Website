@@ -14,8 +14,8 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
       const loader = document.getElementById('loader');
-      
-
+     
+     
       var db = firebase.firestore();
       loadAnySection();
       function loadAnySection() {
@@ -63,7 +63,6 @@
                 console.log(targetBook);
             }
           }
-          alert('Opening some page');
           fetch('../pages/Templates/bookreview.html').then(response => response.text()).then((data) => {
             let k = '';  
              k = data.replaceAll(`{{AuthorName}}`, targetBook.AuthorName)
