@@ -23,7 +23,17 @@
 
 
 /* row for adverts */
+.back_floater{
+    position: fixed;
+    background: linear-gradient(180deg, rgb(192, 14, 14), rgb(145, 11, 11));
+    color: rgb(243, 243, 243);
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
 
+}
 .row1{
     display: flex;
     flex-direction: row;
@@ -215,6 +225,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
 </head>
 <body>
  <div class="content">
+     <button class="back_floater" onclick="location.reload()">Back</button>
  <div class="row1">
     <img class="advert"  src="../../assets/images/intiti-white.png">
     <img class="advert" src="../../assets/images/intiti-blue.png">
@@ -229,7 +240,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
  <p class="navitem" onclick="location.href=`../pages/tech.html`">Tech</p>
  <p class="navitem" onclick="location.href=`../pages/culture.html`">Culture</p>
  <p class="navitem" onclick="location.href=`../pages/religion.html`">Religion</p>
- <p class="navitem">Opinion</p>
+ <p class="navitem" onclick="location.href=`../pages/entertainment.html`">Entertainment</p>
  <p class="navitem">Video Portal</p>
  <p class="navitem">About Us</p>
 
