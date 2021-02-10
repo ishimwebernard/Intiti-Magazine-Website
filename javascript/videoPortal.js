@@ -36,3 +36,7 @@
             mainVideoStreaming.play();
             mainVideoStreaming.scrollIntoView({behavior: "smooth"});
         }
+        let content = document.getElementsByClassName('content')[0];
+setTimeout(()=>{
+    document.getElementById('floaterMadeInRwanda').style.display = "block";
+}, 2500);

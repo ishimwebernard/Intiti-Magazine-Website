@@ -11,7 +11,20 @@
     /* overflow-x: hidden; */
 
 }
+#floaterMadeInRwanda{
+    position: fixed;
+    height: 100px;
+    width: 5.5%;
+    margin-left: 92.5%;
+    display: none;
+    animation-name: YAMAHA_ANIMEE;
+    animation-duration: 1s;
 
+}
+@keyframes YAMAHA_ANIMEE{
+    from{margin-left: 0%;}
+    to{margin-left: 92.5%;}
+}
 
 /* row for adverts */
 

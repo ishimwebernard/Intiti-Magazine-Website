@@ -84,3 +84,6 @@
                 console.log(Book);
           })
       }
+      setTimeout(()=>{
+          document.getElementById('floaterMadeInRwanda').style.display = "block";
+      }, 2500);

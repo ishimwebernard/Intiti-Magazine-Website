@@ -134,3 +134,7 @@ function ONW(Body, _date, Picture, Title,Writer){
         
     })
 }
+let content = document.getElementsByClassName('content')[0];
+setTimeout(()=>{
+    document.getElementById('floaterMadeInRwanda').style.display = "block";
+}, 2500);
