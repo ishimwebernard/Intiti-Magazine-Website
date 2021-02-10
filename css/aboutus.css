@@ -146,6 +146,23 @@
     background: #F4FBFF;
     height: 250px;
 }
+.recommenders{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 6.36941896024465%;
+
+}
+.recommenders img{
+    height: 100px;
+    width: 90%;
+    object-fit: contain;
+    margin-top: 3rem;
+
+}
+.identifier{
+    margin-left: 6.36941896024465%;
+opacity: 60%;
+}
 
 #booksPublication{
     background: url('../assets/images/booksPublicationCard.png');
