@@ -224,7 +224,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
  </style>
 </head>
 <body>
- <div class="content">
+ <div class="content" id="content">
      <button class="back_floater" onclick="location.reload()">Back</button>
  <div class="row1">
     <img class="advert"  src="../../assets/images/intiti-white.png">
@@ -233,7 +233,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
  </div>
  <div class="row2">
 
- <div class="navbar">
+ <div class="navbar" id="navbar">
  <p class="navitem" onclick="location.href=`../index.html`">Home</p>
  <p class="navitem" onclick="location.href=`../pages/books-publication.html`">Magazines</p>
  <p class="navitem" onclick="location.href=`../pages/business.html`">Business</p>
@@ -377,5 +377,8 @@ box-shadow:  5px 5px 10px #e8e8e8,
     </div>
 </div>
  </div>
+ <script>
+     document.getElementById('content').scrollIntoView({behavior: "smooth"});
+ </script>
 </body>
 </html>
