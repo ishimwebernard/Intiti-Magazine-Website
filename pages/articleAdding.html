@@ -18,10 +18,10 @@
     button{
         background: linear-gradient(180deg, rgb(85, 85, 85), rgb(26, 26, 26));
         color: #fff;
-        width: 10%;
         font-weight: 700;
         font-size: 2rem;
         border-radius: 10px;
+        display: inline-block;
         margin-top: 50px;
     }
     .r{
@@ -89,6 +89,27 @@
            <input type="file" id="file" accept="image/png, image/jpeg">
        </div>
        <button onclick="uploadArticle()">Finish</button>
+       <p>Book adding Wizard</p>
+       <input type="text" id="AboutAuthor" placeholder="AboutAuthor">
+       <input type="text" id="DatePublished" placeholder="DatePublished">
+       <input type="text" id="FileSize" placeholder="FileSize">
+       <input type="text" id="Language" placeholder="Language">
+       <input type="text" id="PDFPrice" placeholder="PDFPrice">
+       <input type="text" id="Pages" placeholder="Pages">
+       <input type="text" id="PapersPrice" placeholder="PapersPrice">
+       <input type="text" id="Publisher" placeholder="Publisher">
+       <input type="text" id="Rating" placeholder="Rating">
+       <input type="text" id="Title" placeholder="Title">
+
+
+       <input type="text" id="AuthorName" placeholder="AuthorName">
+       <textarea name="AboutThisBook" id="AboutThisBook" cols="30" rows="10" placeholder="AboutThisBook"></textarea>
+       <label for="AuthorPicture">AuthorPicture</label>
+       <input type="file" id="AuthorPicture">
+       <label for="Picture">Picture</label>
+       <input type="file" id="Picture">
+       <button onclick="uploadBook()">Upload</button>
+       
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
@@ -139,6 +160,50 @@
                 });
             });
             
+        }
+       // uploadBook();
+        async function uploadBook(){
+            let uploadObject = {
+                AboutAuthor: document.getElementById('AboutAuthor').value,
+                AboutThisBook: document.getElementById('AboutThisBook').value,
+                AuthorName: document.getElementById('AuthorName').value,
+                DatePublished: document.getElementById('DatePublished').value,
+                FileSize: document.getElementById('FileSize').value,
+                Language: document.getElementById('Language').value,
+                PDFPrice: document.getElementById('PDFPrice').value,
+                Pages: document.getElementById('Pages').value,
+                PapersPrice: document.getElementById('PapersPrice').value,
+                Publisher: document.getElementById('Publisher').value,
+                Rating: document.getElementById('Rating').value,
+                Title: document.getElementById('Title').value,
+            }
+            let AuthorPicture = document.getElementById('AuthorPicture').files[0];
+            let Picture = document.getElementById('Picture').files[0];
+            loader.style.display = 'block';
+            let storageRef = firebase.storage().ref().child(String(AuthorPicture.name).replaceAll(' ', '')+ String((new Date())).replaceAll(' ', ''));
+            await storageRef.put(AuthorPicture).then((snapshot)=>{
+                snapshot.ref.getDownloadURL().then((url)=>{
+                    uploadObject.AuthorPicture = url;
+                })
+            }).catch((error)=>{
+                alert(error);
+            });
+            storageRef = firebase.storage().ref().child(String(Picture.name).replaceAll(' ', '')+ String((new Date())).replaceAll(' ', ''));
+            await storageRef.put(Picture).then((snapshot)=>{
+                snapshot.ref.getDownloadURL().then((url)=>{
+                    uploadObject.Picture = url;
+                }).catch((error)=>{
+                    alert(error);
+                })
+            }).catch((error)=>{
+                alert(error);
+            });
+            await firebase.firestore().collection('books').add(uploadObject).then(()=>{
+                loader.style.display = 'none';
+                alert('Success');
+            }).catch((error)=>{
+                alert(error);
+            })
         }
     </script>
 </body>

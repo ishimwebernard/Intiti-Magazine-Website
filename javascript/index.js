@@ -95,30 +95,35 @@
             console.log('Setting background ...');
         }
 
-        loadAnySection();
-
-        function loadAnySection() {
+        loadAnySection('news', document.getElementById('news'));
+        loadAnySection('entertainment', document.getElementById('entertainment'));
+        loadAnySection('business', document.getElementById('business'));
+        loadAnySection('religion', document.getElementById('religion'));
+        loadAnySection('culture', document.getElementById('culture'));
+        loadAnySection('tech', document.getElementById('tech'));
+        function loadAnySection(section, correspondant) {
             loader.style.display = "block";
-            let MINIMUMNUMBER = 0;
-            var mainDocument = document.getElementById('news');
-            db.collection('news').get().then((qSnapShot) => {
+            let MINIMUMNUMBER = 0; 
+            db.collection(section).get().then((qSnapShot) => {
                 qSnapShot.forEach((doc) => {
                     console.log(doc.data());
                     var SLICED = String(doc.data().Body).slice(0, 70);
                   
-                        news.innerHTML += `
-                <div class="news-card" onclick="ONW('${doc.data().Body}',
-                '${doc.data().Date}', 
-                '${doc.data().Picture}',
-                '${doc.data().Title}',
-                '${doc.data().Writer}',)">
-                        <img src="${doc.data().Picture}" alt="" class="news-image">
-                        <p class="news-header">${doc.data().Title}</p>
-                        <p class="news-content">
-                              ${SLICED}
-                        </p>
-                    </div>
-                `;
+                    if(MINIMUMNUMBER <= 2){
+                        correspondant.innerHTML += `
+                        <div class="news-card" onclick="ONW('${doc.data().Body}',
+                        '${doc.data().Date}', 
+                        '${doc.data().Picture}',
+                        '${doc.data().Title}',
+                        '${doc.data().Writer}',)">
+                                <img src="${doc.data().Picture}" alt="" class="news-image">
+                                <p class="news-header">${doc.data().Title}</p>
+                                <p class="news-content">
+                                      ${SLICED}
+                                </p>
+                            </div>
+                        `;
+                    }
                  
                     MINIMUMNUMBER += 1;
                 })
@@ -127,6 +132,7 @@
             })
             
         }
+         
 function ONW(Body, _date, Picture, Title,Writer){
     fetch('./pages/Templates/articleRender.html').then(response=> response.text()).then((data)=>{
         let s = data.toString().replace('{{Body}}', Body).replace('{{Title}}', Title).replace('{{Picture}}', Picture).replace('{{Date}}', _date).replace('{{Writer}}', Writer);
