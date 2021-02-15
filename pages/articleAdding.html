@@ -198,6 +198,16 @@
             }).catch((error)=>{
                 alert(error);
             });
+            storageRef = firebase.storage().ref().child(String(Book.name).replaceAll(' ', '')+ String((new Date())).replaceAll(' ', ''));
+            await storageRef.put(Book).then((snapshot)=>{
+                snapshot.ref.getDownloadURL().then((url)=>{
+                    uploadObject.Book = url;
+                }).catch((error)=>{
+                    alert(error);
+                })
+            }).catch((error)=>{
+                alert(error);
+            });
             await firebase.firestore().collection('books').add(uploadObject).then(()=>{
                 loader.style.display = 'none';
                 alert('Success');
