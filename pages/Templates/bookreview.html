@@ -27,7 +27,7 @@
             background: linear-gradient(1801deg, rgb(224, 224, 224), rgb(172, 172, 172));
             border: 1px rgb(139, 139, 139) solid;
             text-shadow: .5px .5px #fff;
-            font-weight: 600;
+            font-weight: 400;
             padding: 7.35px;
             border-radius: 7.5px;
             cursor: pointer;
@@ -39,6 +39,17 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
+        .back_floater{
+    position: fixed;
+    background: linear-gradient(180deg, rgb(192, 14, 14), rgb(145, 11, 11));
+    color: rgb(243, 243, 243);
+    font-weight: 300;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: .5rem;
+
+}
         .row1 img{
             object-fit: cover;
             width: 100%;
@@ -90,7 +101,7 @@
 
         .row2 .navbar p {
             margin-left: 2.67584097859327%;
-            font-weight: 700;
+            font-weight: 500;
             height: 100%;
             color: #535353;
             cursor: pointer;
@@ -124,7 +135,7 @@
         .main .col1 h3{
             color: #000;
             opacity: 80%;
-            font-weight: 600;
+            font-weight: 400;
             margin-top: 20px;
         }
         .main .col1 .authorCredentials{
@@ -149,6 +160,7 @@
         .main .col2 h1{
             font-size: 3rem;
             color:rgb(35, 82, 134);
+            font-weight: 600;
         }
         .main .col2 .bookAuthorName{
             margin-top: 10px;
@@ -188,14 +200,14 @@
             margin-top: 40px;
         }
         .main .col2 .bookDetails .bookDetail .indicator{
-            font-weight: 700;
+            font-weight: 500;
             color:rgb(35, 82, 134);
         }
         .main .col2 .bookDetails .bookDetail .value{
-            font-weight: 700;
+            font-weight: 500;
         }
         .main .col2 .aboutThisBook{
-            font-weight: 700;
+            font-weight: 500;
             margin-top: 20px;
         }
         .main .col2 .sampleDesc{
@@ -211,7 +223,7 @@
             border-bottom: 1px rgb(221, 221, 221) solid;
         }
         .main .col3 .saleDetails .indicator{
-            font-weight: 700;
+            font-weight: 500;
             font-size: 1.1rem;
             color: rgb(88, 88, 88);
         }
@@ -235,11 +247,10 @@
             padding: 10px;
         }
         .otherbooks .others .news-card{
-            background: rgb(240, 240, 240);
             padding-bottom: 10%;
-            border-radius: 10px;
-            width: 95%;
-            margin-top: 10px;
+    width: 95%;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px #e8e8e8, 5px -5px 10px #ffffff;
         }
         .otherbooks .others .news-card img{
             height: 250px;
@@ -254,11 +265,11 @@
             width: 20px;
         }
         .otherbooks .others .news-card .informations .bookname{
-            font-weight: 600;
+            font-weight: 400;
            
         }
         .otherbooks .otherbooksinthestore{
-            font-weight: 700;
+            font-weight: 500;
             margin-left: 10px;
             font-size: 1.5rem;
         }
@@ -296,11 +307,140 @@
             height: 1.5rem;
             padding-right: .5rem;
         }
+
+
+
+
+@media only screen and (min-width:  0px) and (max-width: 860px){
+    *{
+        font-size: 14px;
+    }
+    .row5{
+        display: flex;
+
+    }
+    .row5 .news-sports-section .news-au-pair{
+        grid-template-columns: 1fr 1fr;
+    }
+    .row5 .advert-zone{
+        display: none;
+    }
+    #floaterMadeInRwanda{
+        position: fixed;
+        height: 0;
+        width: 0;
+        margin-left: 92.5%;
+        display: none;
+        animation-name: YAMAHA_ANIMEE;
+        animation-duration: 1s;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #hamburger img{
+        display: block;
+    }
+    
+    .row2{
+        display: none;
+    }
+    .row1{
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+    }
+    .row1 .advert{
+        width: 90%;
+    }
+    .row1 .hamburger{
+        margin-top: 15px;
+    }
+    #deepBlue{
+        display: none;
+    }
+    .main{
+         display: grid;
+         grid-template-columns: 1fr 1fr;;
+     }
+     .main .col2 .bookVersions{
+         display: flex;
+         flex-direction: column;
+     }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    *{
+        font-size: 12px;;
+    }
+        .row3{
+        display: flex;
+        flex-direction: column;
+    } 
+     .main{
+         display: flex;
+         flex-direction: column;
+     }
+     .main .col1 img{
+         height: 250px;
+     }
+     .fullOtherBooks{
+         display: flex;
+         flex-direction: column;
+     }
+     .fullOtherBooks .animee{
+        display: none;
+     }
+     .otherbooks .others{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+     }
+}
+@media only screen and (min-width: 0px) and (max-width: 299px){
+    *{
+        font-size: 10px;
+    }
+    .row3{
+        display: flex;
+        flex-direction: column;
+    } 
+     .row3 .mainArticle{
+        height: 150px;
+        width: 100%;
+    }
+    .row3 .secondaryItems .secondaryRow{
+        display: none;
+    }
+    #hamburger img{
+        height: 10px;
+        width: 20px;
+        margin-top: 0px;
+    }
+    .row5 .news-sports-section .news-au-pair{
+        display: flex;
+        flex-direction: column;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+
+
+
+
     </style>
 </head>
 
 <body>
     <div class="content">
+        <button class="back_floater" onclick="location.reload()">Back</button>
         <img class="advert" id="floaterMadeInRwanda"
         src="../../assets/images/madeInRwanda.png">
         <div class="row1">
@@ -580,7 +720,21 @@
             </div>
         </div>
     </div>
-    <script src="../../javascript/bookreview.js"></script>
+    <script>
+        // let content = document.getElementsByClassName('content')[0];
+// content.scrollIntoView({behavior: "smooth"});
+// setTimeout(()=>{
+//     document.getElementById('floaterMadeInRwanda').style.display = "block";
+// }, 2500);
+
+function openCloseMobileNav(){
+    document.getElementById('pureNav').style.display = 'grid'
+}
+function closeBurger(){
+document.getElementById('pureNav').style.display = 'none';
+
+}
+    </script>
 </body>
 
 </html>

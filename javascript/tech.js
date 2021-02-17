@@ -20,7 +20,6 @@
             querySnapshot.forEach((doc) => {
             });
         }).catch((error) => {
-            console.log(error);
         });
         // loadMainArticle();
 
@@ -32,9 +31,7 @@
 
                 querySnapshot.forEach((doc) => {
                     allPresenters.push(doc.data());
-                    console.log(doc.data())
                 });
-                console.log(allPresenters);
                 var idMaker = allPresenters[0].Title + "ID";
                 row3.innerHTML = `
         <div class="mainArticle"  style="background-image: url('${allPresenters[0].Picture}');">
@@ -86,7 +83,6 @@
 
         }
         function setBackground(id, bg){
-            console.log('Setting background ...');
         }
 
       loadAnySection();
@@ -97,7 +93,6 @@
             var mainDocument = document.getElementById('business');
             db.collection('tech').get().then((qSnapShot) => {
                 qSnapShot.forEach((doc) => {
-                    console.log(doc.data());
                     var SLICED = String(doc.data().Body).slice(0, 70);
            
                         mainDocument.innerHTML += `

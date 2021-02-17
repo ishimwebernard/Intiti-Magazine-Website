@@ -18,14 +18,8 @@
         var db = firebase.firestore();
         db.collection('mainArticles').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                // console.log(doc);
-                // console.log(Object.keys(doc));
-                // console.log(doc.id);
-                // console.log(doc.data());
-                console.log("The section reached");
             });
         }).catch((error) => {
-            console.log(error);
         });
         // loadMainArticle();
 
@@ -33,14 +27,11 @@
             var row3 = document.getElementById('row3');
             loader.style.display = "block";
             db.collection('presenter').get().then((querySnapshot) => {
-                // console.log(Object.keys(querySnapshot));
                 var allPresenters = [];
 
                 querySnapshot.forEach((doc) => {
                     allPresenters.push(doc.data());
-                    console.log(doc.data())
                 });
-                console.log(allPresenters);
                 var idMaker = allPresenters[0].Title + "ID";
                 row3.innerHTML = `
         <div class="mainArticle"  style="background-image: url('${allPresenters[0].Picture}');">
@@ -92,7 +83,6 @@
 
         }
         function setBackground(id, bg){
-            console.log('Setting background ...');
         }
 
       loadAnySection();
@@ -103,7 +93,6 @@
             var mainDocument = document.getElementById('business');
             db.collection('culture').get().then((qSnapShot) => {
                 qSnapShot.forEach((doc) => {
-                    console.log(doc.data());
                     var SLICED = String(doc.data().Body).slice(0, 70);
           
                         mainDocument.innerHTML += `

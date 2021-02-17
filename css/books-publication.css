@@ -8,10 +8,43 @@
 .content{
     width: 100%;
     height: 100%;
+    background: #f8f8f8;
     /* overflow-x: hidden; */
 
 }
+#hamburger img{
+    height: 20px;
+    width: 40px;
+    display: none;
+}
+.purenav{
+    display: none;
+    grid-template-columns: 2fr 1fr;
+    position: fixed;
+    z-index: 1 ;
+    width: 100%;
+    height: 100%;
+    top: 0;
 
+
+}
+.purenav .exiter{
+    background: #000;
+    opacity: 50%;
+}
+.navMobile{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-bottom: 10px;
+    background: #f8f8f8;
+    padding-top: 20px;
+}
+.navMobile p{
+    font-size: 2rem;
+    margin-left: 10%;
+    margin-top: 2px;
+}
 
 /* row for adverts */
 
@@ -51,7 +84,7 @@
 }
 .row2 .navbar p{
     margin-left: 2.67584097859327%;
-    font-weight: 700;
+    font-weight: 600;
     height: 100%;
     color: #535353;
     cursor: pointer;
@@ -86,6 +119,7 @@
 .fullOtherBooks{
     display: grid;
     grid-template-columns: 3.5fr 1fr;
+    margin-top: 10px;
 }
 .otherbooks .others{
     display: grid;
@@ -93,11 +127,11 @@
     padding: 10px;
 }
 .otherbooks .others .news-card{
-    background: rgb(240, 240, 240);
     padding-bottom: 10%;
-    border-radius: 10px;
     width: 95%;
     margin-top: 10px;
+    box-shadow:  5px 5px 10px #e8e8e8, 
+             5px -5px 10px #ffffff;
 }
 .otherbooks .others .news-card img{
     height: 250px;
@@ -172,3 +206,111 @@
     font-size: 2rem;
     left: 45%;
 }
+
+
+
+
+
+@media only screen and (min-width:  0px) and (max-width: 860px){
+    *{
+        font-size: 14px;
+    }
+    .row5{
+        display: flex;
+
+    }
+    .row5 .news-sports-section .news-au-pair{
+        grid-template-columns: 1fr 1fr;
+    }
+    .row5 .advert-zone{
+        display: none;
+    }
+    #floaterMadeInRwanda{
+        position: fixed;
+        height: 0;
+        width: 0;
+        margin-left: 92.5%;
+        display: none;
+        animation-name: YAMAHA_ANIMEE;
+        animation-duration: 1s;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #hamburger img{
+        display: block;
+    }
+    
+    .row2{
+        display: none;
+    }
+    .row1{
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+    }
+    .row1 .advert{
+        width: 90%;
+    }
+    .row1 .hamburger{
+        margin-top: 15px;
+    }
+    #deepBlue{
+        display: none;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .fullOtherBooks{
+        display: flex;
+    }
+    .fullOtherBooks .animee{
+        display: none;
+    }
+    .otherbooks .others{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+
+}
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    *{
+        font-size: 12px;;
+    }
+        .row3{
+        display: flex;
+        flex-direction: column;
+    } 
+     .row3 .mainArticle{
+        height: 250px;
+        width: 100%;
+    }
+    .row1 .hamburger{
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    #hamburger img{
+        width: 20px;
+        height: 15px;
+    }
+    .row5 .news-sports-section .news-au-pair{
+        display: flex;
+        flex-direction: column;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr;
+    }
+    .otherbooks .others{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 299px){
+    *{
+        font-size: 10px;
+    }
+  
+}
+

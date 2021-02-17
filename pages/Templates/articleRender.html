@@ -18,27 +18,64 @@
 .content{
     width: 100%;
     height: 100%;
+    background: #f8f8f8;
+
     /* overflow-x: hidden; */
 
 }
 
+#hamburger img{
+    height: 20px;
+    width: 40px;
+    display: none;
+}
 
 /* row for adverts */
 .back_floater{
     position: fixed;
     background: linear-gradient(180deg, rgb(192, 14, 14), rgb(145, 11, 11));
     color: rgb(243, 243, 243);
-    font-weight: 700;
+    font-weight: 500;
     border: none;
     padding: 10px;
-    border-radius: 5px;
     margin: 5px;
+    border-radius: .5rem;
 
+}
+.navMobile{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-bottom: 10px;
+    background: #f8f8f8;
+    padding-top: 20px;
+}
+.navMobile p{
+    font-size: 2rem;
+    margin-left: 10%;
+    margin-top: 2px;
+}
+
+.purenav{
+    display: none;
+    grid-template-columns: 2fr 1fr;
+    position: fixed;
+    z-index: 1 ;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+
+}
+.purenav .exiter{
+    background: #000;
+    opacity: 50%;
 }
 .row1{
     display: flex;
     flex-direction: row;
 }
+
 /* Row with LOGO and navigation bar */
 .row2{
     display: flex;
@@ -69,7 +106,7 @@
 
 .row2 .navbar p{
     margin-left: 2.67584097859327%;
-    font-weight: 700;
+    font-weight: 600;
     height: 100%;
     color: #535353;
     cursor: pointer;
@@ -98,13 +135,14 @@
 .row3 .main h1{
     font-size: 3rem;
     opacity: 70%;
+    font-weight: 500;
 }
 .row3 .main .details{
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 .row3 .main .details .writer{
-    font-weight: 700;
+    font-weight: 500;
 
 }
 .row3 h2{
@@ -120,7 +158,7 @@
     opacity: 50%;
 }
 .row3 .main img{
-    width: 80%;
+    width: 100%;
     height: 500px;
     margin-top: 50px;
     margin-bottom: 100px;
@@ -170,12 +208,10 @@
 .row5  .news-au-pair .news-card{
     margin-left: 5%;
     cursor: pointer;
-    background: #f1f1f1;
 box-shadow:  5px 5px 10px #e8e8e8, 
              5px -5px 10px #ffffff;
      padding-bottom: 1rem;      
      margin-bottom: 1rem;  
-     border-radius: .5rem;  
 }
 
 .row5  .news-au-pair .news-card:hover img{
@@ -184,7 +220,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
 
 
 .row5  .news-au-pair .news-card .news-header{
-    font-weight: 700;
+    font-weight: 500;
     color: #0C4B6E;
     font-size: 1.2rem;
     margin: .5rem;
@@ -227,6 +263,34 @@ box-shadow:  5px 5px 10px #e8e8e8,
         font-size: 14px;
     }
 
+    #hamburger img{
+        display: block;
+    }
+    
+    .row2{
+        display: none;
+    }
+
+    .row1{
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+    }
+    .row1 .advert{
+        width: 90%;
+    }
+    .row1 .hamburger{
+        margin-top: 15px;
+    }
+
+    #deepBlue{
+        display: none;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+
 
 }
 @media only screen and (min-width: 300px) and (max-width: 600px){
@@ -264,9 +328,26 @@ box-shadow:  5px 5px 10px #e8e8e8,
 <body>
  <div class="content" id="content">
      <button class="back_floater" onclick="location.reload()">Back</button>
+     <div class="purenav" id="pureNav">
+        <div class="navMobile" id="navMobile" >
+            <p class="navitem">Home</p>
+            <p class="navitem" onclick="location.href=`./pages/books-publication.html`">Magazines</p>
+            <p class="navitem" onclick="location.href=`./pages/business.html`">Business</p>
+            <p class="navitem" onclick="location.href=`./pages/tech.html`">Tech</p>
+            <p class="navitem" onclick="location.href=`./pages/culture.html`">Culture</p>
+            <p class="navitem" onclick="location.href=`./pages/religion.html`">Religion</p>
+            <p class="navitem" onclick="location.href=`./pages/entertainment.html`">Entertainment</p>
+            <p class="navitem" onclick="location.href=`../pages/videoPortal.html`">Video Portal</p>
+            <p class="navitem" onclick="location.href=`../pages/aboutUs.html`">About Us</p>
+        </div>
+        <div class="exiter" onclick="closeBurger()"> </div>
+       </div>
  <div class="row1">
     <img class="advert"  src="../../assets/images/intiti-white.png">
-    <img class="advert" src="../../assets/images/intiti-blue.png">
+    <img class="advert" id="deepBlue" src="../../assets/images/intiti-blue.png">
+    <div class="hamburger" id="hamburger" onclick="openCloseMobileNav()">
+        <img src="/assets/images/hamburger.png" alt="">
+    </div>
 
  </div>
  <div class="row2">
@@ -296,6 +377,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
   {{Body}} 
  </div>
  </div>
+
  <div class="advert">
  <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/Africa-Improved-Food-1.gif?alt=media&token=7ef66f04-a489-4bab-9a5b-d0409392b8c0" alt="">
  <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/Heineken_-1.gif?alt=media&token=326b93e7-4ebd-47c6-8399-14436087b527" alt="">
@@ -417,6 +499,13 @@ box-shadow:  5px 5px 10px #e8e8e8,
  </div>
  <script>
      document.getElementById('content').scrollIntoView({behavior: "smooth"});
+     function openCloseMobileNav(){
+        document.getElementById('pureNav').style.display = 'grid';
+}
+function closeBurger(){
+    document.getElementById('pureNav').style.display = 'none';
+
+}
  </script>
 </body>
 </html>

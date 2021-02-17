@@ -20,7 +20,6 @@
             querySnapshot.forEach((doc) => {
             });
         }).catch((error) => {
-            console.log(error);
         });
         loadMainArticle();
         function openCloseMobileNav(){
@@ -140,7 +139,6 @@ setTimeout(()=>{
 }, 2500);
 function openCloseMobileNav(){
         document.getElementById('pureNav').style.display = 'grid'
-        console.log('Called');
 }
 function closeBurger(){
     document.getElementById('pureNav').style.display = 'none';

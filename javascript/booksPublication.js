@@ -59,7 +59,6 @@
           for(let sampleBook of fullBooks){
             if(sampleBook.Title == Book){
                 targetBook = sampleBook;
-                console.log(targetBook);
             }
           }
           fetch('../pages/Templates/bookreview.html').then(response => response.text()).then((data) => {
@@ -80,9 +79,16 @@
              document.open();
 
               document.write(k);
-                console.log(Book);
           })
       }
+
+function openCloseMobileNav(){
+    document.getElementById('pureNav').style.display = 'grid'
+}
+function closeBurger(){
+document.getElementById('pureNav').style.display = 'none';
+
+}
       setTimeout(()=>{
           document.getElementById('floaterMadeInRwanda').style.display = "block";
       }, 2500);
