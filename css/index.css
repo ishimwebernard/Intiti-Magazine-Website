@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Assistant', sans-serif;
     font-size: 16px;
     overflow-x: hidden;
 }
@@ -100,7 +100,7 @@ img{
 
 .row2 .navbar p{
     margin-left: 2.67584097859327%;
-    font-weight: 700;
+    font-weight: 600;
     height: 100%;
     color: #535353;
     cursor: pointer;
@@ -144,13 +144,13 @@ img{
 .row3 .secondaryItems .secondaryRow .secArticle .title{
     background: linear-gradient(180deg, rgb(121, 121, 121),transparent);
     color: #fff;
-    font-weight: 700;
+    font-weight: 500;
     padding: .5rem;
 }
 .row3 .mainArticle h3{
     background: linear-gradient(180deg, rgb(121, 121, 121), transparent);
     color: #fff;
-    font-weight: 700;
+    font-weight: 500;
     padding: .5rem;
 }
 
@@ -196,7 +196,7 @@ img{
     padding: 0;
     width: 100%;
     margin:0;
-    font-weight: 600;
+    font-weight: 400;
 }
  .news-au-sixth .news-card .bookdescription{
     padding: 0;
@@ -242,7 +242,7 @@ img{
     margin-top: .1rem;
     color: #fff;
     background: linear-gradient(180deg, rgb(49, 49, 49), rgb(17, 17, 17));
-    font-weight: 600;
+    font-weight: 400;
     text-shadow: .9px .9px rgb(156, 156, 156);
     cursor: pointer;
 }
@@ -258,7 +258,7 @@ img{
 }
 .row5 .mainLNews p{
     /* margin-top: 32.85%; */
-    font-weight: 600;
+    font-weight: 400;
     background: #000;
     color: #fff;
     opacity: 80%;
@@ -303,7 +303,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
 
 
 .row5 .news-sports-section .news-au-pair .news-card .news-header{
-    font-weight: 700;
+    font-weight: 500;
     color: #0C4B6E;
     font-size: 1.2rem;
     margin: .5rem;
@@ -366,7 +366,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
     width: 92%;
 }
 .row6 .video-cluster .video p{
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.1rem;
 }
 
@@ -419,7 +419,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     top: 50%;
     font-size: 2rem;
     left: 45%;
