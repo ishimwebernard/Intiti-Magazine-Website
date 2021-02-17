@@ -526,6 +526,13 @@ box-shadow:  5px 5px 10px #e8e8e8,
         width: 20px;
         margin-top: 0px;
     }
+    .row5 .news-sports-section .news-au-pair{
+        display: flex;
+        flex-direction: column;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
