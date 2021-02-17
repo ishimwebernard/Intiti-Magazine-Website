@@ -13,6 +13,9 @@
     /* overflow-x: hidden; */
 
 }
+img{
+    object-fit: cover;
+}
 #floaterMadeInRwanda{
     position: fixed;
     height: 100px;
@@ -421,7 +424,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
     font-size: 2rem;
     left: 45%;
 }
-@media only screen and (min-width:  300px) and (max-width: 860px){
+@media only screen and (min-width:  0px) and (max-width: 860px){
     *{
         font-size: 14px;
     }
@@ -465,7 +468,65 @@ box-shadow:  5px 5px 10px #e8e8e8,
     .row1 .hamburger{
         margin-top: 15px;
     }
+    #deepBlue{
+        display: none;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+
 
 }
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    *{
+        font-size: 12px;;
+    }
+        .row3{
+        display: flex;
+        flex-direction: column;
+    } 
+     .row3 .mainArticle{
+        height: 250px;
+        width: 100%;
+    }
+    .row1 .hamburger{
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    #hamburger img{
+        width: 20px;
+        height: 15px;
+    }
+    .row5 .news-sports-section .news-au-pair{
+        display: flex;
+        flex-direction: column;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 299px){
+    *{
+        font-size: 10px;
+    }
+    .row3{
+        display: flex;
+        flex-direction: column;
+    } 
+     .row3 .mainArticle{
+        height: 150px;
+        width: 100%;
+    }
+    .row3 .secondaryItems .secondaryRow{
+        display: none;
+    }
+    #hamburger img{
+        height: 10px;
+        width: 20px;
+        margin-top: 0px;
+    }
+}
+
 
 
