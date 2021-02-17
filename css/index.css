@@ -16,6 +16,9 @@
 img{
     object-fit: cover;
 }
+h3{
+    font-weight: 500;
+}
 #floaterMadeInRwanda{
     position: fixed;
     height: 100px;
@@ -275,6 +278,7 @@ img{
     font-size: 2rem;
     margin-top: 3rem;
     border-bottom:1px #a5a5a5 solid;
+    font-weight: 500;
 
 }
 .row5 .news-sports-section .news-au-pair{
@@ -398,6 +402,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
 .footer .footer-group h2{
     color: #fff;
     font-size: 2rem;
+    font-weight: 500;
 }
 .footer .footer-item img{
     width: 1.5rem;
