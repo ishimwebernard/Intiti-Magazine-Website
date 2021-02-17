@@ -18,11 +18,6 @@
         var db = firebase.firestore();
         db.collection('mainArticles').get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                // console.log(doc);
-                // console.log(Object.keys(doc));
-                // console.log(doc.id);
-                // console.log(doc.data());
-                console.log("The section reached");
             });
         }).catch((error) => {
             console.log(error);
@@ -33,7 +28,6 @@
             var row3 = document.getElementById('row3');
             loader.style.display = "block";
             db.collection('presenter').get().then((querySnapshot) => {
-                // console.log(Object.keys(querySnapshot));
                 var allPresenters = [];
 
                 querySnapshot.forEach((doc) => {

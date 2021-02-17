@@ -127,12 +127,10 @@
 .row5  .news-au-pair .news-card{
     margin-left: 5%;
     cursor: pointer;
-    background: #f1f1f1;
 box-shadow:  5px 5px 10px #e8e8e8, 
              5px -5px 10px #ffffff;
      padding-bottom: 1rem;      
      margin-bottom: 1rem;  
-     border-radius: .5rem;  
 }
 
 .row5  .news-au-pair .news-card:hover img{

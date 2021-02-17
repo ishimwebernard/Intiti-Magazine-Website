@@ -24,7 +24,6 @@
           db.collection('books').get().then((qSnapShot) => {
 
               qSnapShot.forEach((doc) => {
-                  console.log(doc.data());
                   fullBooks.push(doc.data());
                   var SLICED = String(doc.data().Body).slice(0, 70);
 
