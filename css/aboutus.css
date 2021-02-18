@@ -150,6 +150,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-left: 6.36941896024465%;
+    animation: marquee 10s linear infinite;
 
 }
 .recommenders img{
@@ -276,7 +277,14 @@ opacity: 60%;
     margin-left: 10%;
     margin-top: 2px;
 }
-
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 
 
 @media only screen and (min-width:  0px) and (max-width: 860px){
