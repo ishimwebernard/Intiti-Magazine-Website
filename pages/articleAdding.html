@@ -108,6 +108,8 @@
        <input type="file" id="AuthorPicture">
        <label for="Picture">Picture</label>
        <input type="file" id="Picture">
+       <label for="Book">Book or Magazine itself</label>
+       <input type="file" id="Book">
        <button onclick="uploadBook()">Upload</button>
        
     </div>
@@ -179,6 +181,7 @@
             }
             let AuthorPicture = document.getElementById('AuthorPicture').files[0];
             let Picture = document.getElementById('Picture').files[0];
+            let Book = document.getElementById('Book').files[0];
             loader.style.display = 'block';
             let storageRef = firebase.storage().ref().child(String(AuthorPicture.name).replaceAll(' ', '')+ String((new Date())).replaceAll(' ', ''));
             await storageRef.put(AuthorPicture).then((snapshot)=>{
