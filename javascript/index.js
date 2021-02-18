@@ -26,6 +26,7 @@
             document.getElementById('navMobile').style.display = 'grid'
         
     }
+    loadVideosToCards();
         function loadMainArticle() {
             var row3 = document.getElementById('row3');
             loader.style.display = "block";
@@ -134,13 +135,24 @@ function ONW(Body, _date, Picture, Title,Writer){
     })
 }
 let content = document.getElementsByClassName('content')[0];
-setTimeout(()=>{
-    document.getElementById('floaterMadeInRwanda').style.display = "block";
-}, 2500);
 function openCloseMobileNav(){
         document.getElementById('pureNav').style.display = 'grid'
 }
 function closeBurger(){
     document.getElementById('pureNav').style.display = 'none';
 
+}
+function loadVideosToCards(){
+    const allVideos = document.getElementById("videoClusters");
+    firebase.firestore().collection('videos').get().then((snapshot)=>{
+        snapshot.forEach((doc)=>{
+            allVideos.innerHTML += `
+            <div class="video" onclick="openVideo('${doc.data().videoSource}')">
+            <img src="${doc.data().videoThumbNail}" alt="">
+            <p class="tag"><span>Video</span></p>
+            <p>${doc.data().videoName}</p>
+        </div>
+            `;
+        })
+    })
 }

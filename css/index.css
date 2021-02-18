@@ -399,7 +399,10 @@ box-shadow:  5px 5px 10px #e8e8e8,
 .row6 .video-cluster{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    animation: marquee 20s linear infinite;
+
 }
+
 .row6 .video-cluster .video{
     width: 92%;
 }
@@ -407,6 +410,26 @@ box-shadow:  5px 5px 10px #e8e8e8,
     font-weight: 500;
     font-size: 1.1rem;
 }
+
+.row6 .video-cluster .video .tag span{
+    background: rgb(5, 93, 175);
+    color: #fff;
+    margin-top: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.row6 .video-cluster .video img{
+    width: 100%;
+    height: 150px;
+}
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 
 .row6 .video-cluster .video img{
    background: url('../assets/images/sample-slideshow.png');

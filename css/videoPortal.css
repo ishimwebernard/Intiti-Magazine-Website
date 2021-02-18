@@ -8,6 +8,7 @@
 .content{
     width: 100%;
     height: 100%;
+    background: #f8f8f8;
     /* overflow-x: hidden; */
 
 }
@@ -90,6 +91,14 @@
     opacity: 70%;
     margin-top: 10px;
 }
+.mainVideos .fullPart .allVideos .video .tag span{
+    background: rgb(5, 93, 175);
+    color: #fff;
+    margin-top: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .mainVideos .fullPart .allVideos .video{
     margin-left: 20px;
 }
