@@ -124,6 +124,13 @@ function ONW(Body, _date, Picture, Title,Writer){
         
     })
 }
+function openCloseMobileNav(){
+    document.getElementById('pureNav').style.display = 'grid'
+}
+function closeBurger(){
+document.getElementById('pureNav').style.display = 'none';
+
+}
 let content = document.getElementsByClassName('content')[0];
 setTimeout(()=>{
     document.getElementById('floaterMadeInRwanda').style.display = "block";

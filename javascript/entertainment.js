@@ -124,7 +124,14 @@ function ONW(Body, _date, Picture, Title,Writer){
         
     })
 }
-let content = document.getElementsByClassName('content')[0];
-setTimeout(()=>{
-    document.getElementById('floaterMadeInRwanda').style.display = "block";
-}, 2500);
+function openCloseMobileNav(){
+    document.getElementById('pureNav').style.display = 'grid'
+}
+function closeBurger(){
+document.getElementById('pureNav').style.display = 'none';
+
+}
+// let content = document.getElementsByClassName('content')[0];
+// setTimeout(()=>{
+//     document.getElementById('floaterMadeInRwanda').style.display = "block";
+// }, 2500);

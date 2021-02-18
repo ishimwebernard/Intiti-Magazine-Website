@@ -12,11 +12,29 @@
 
 <body>
     <div class="content">
+        <div class="purenav" id="pureNav">
+            <div class="navMobile" id="navMobile" >
+                <p class="navitem" onclick="location.href=`../index.html`">Home</p>
+                <p class="navitem" onclick="location.href=`./books-publication.html`">Magazines</p>
+                <p class="navitem" onclick="location.href=`./business.html`">Business</p>
+                <p class="navitem" onclick="location.href=`./tech.html`">Tech</p>
+                <p class="navitem" onclick="location.href=`./culture.html`">Culture</p>
+                <p class="navitem" onclick="location.href=`./religion.html`">Gospel</p>
+                <p class="navitem" onclick="location.href=`./entertainment.html`">Entertainment</p>
+                <p class="navitem" onclick="location.href=`./videoPortal.html`">Video Portal</p>
+                <p class="navitem" onclick="location.href=`./aboutUs.html`">About Us</p>
+            </div>
+            <div class="exiter" onclick="closeBurger()"> </div>
+           </div>
         <div class="loader" id="loader"><p>Loading ...</p></div>
 
         <div class="row1">
             <img class="advert"  src="../assets/images/intiti-white.png">
-            <img class="advert" src="../assets/images/intiti-blue.png">
+            <img class="advert" src="../assets/images/intiti-blue.png" id="deepBlue">
+            <div class="hamburger" id="hamburger" onclick="openCloseMobileNav()">
+                <img src="/assets/images/hamburger.png" alt="">
+            </div>
+
         </div>
 
         <div class="row2">
@@ -27,7 +45,7 @@
                 <p class="navitem" onclick="location.href=`./business.html`">Business</p>
                 <p class="navitem" onclick="location.href=`./tech.html`">Tech</p>
                 <p class="navitem" onclick="location.href=`./culture.html`">Culture</p>
-                <p class="navitem" onclick="location.href=`./religion.html`">Religion</p>
+                <p class="navitem" onclick="location.href=`./religion.html`">Gospel</p>
                 <p class="navitem" onclick="location.href=`./entertainment.html`">Entertainment</p>
                 <p class="navitem" onclick="location.href=`./videoPortal.html`">Video Portal</p>
                 <p class="navitem" onclick="location.href=`./aboutUs.html`">About Us</p>

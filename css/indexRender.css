@@ -84,7 +84,7 @@
     grid-template-rows: 1fr 1fr;
 }
 .row3 .main .details .writer{
-    font-weight: 700;
+    font-weight: 500;
 
 }
 .row3 .main .details .dateWritten{
@@ -139,7 +139,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
 
 
 .row5  .news-au-pair .news-card .news-header{
-    font-weight: 700;
+    font-weight: 500;
     color: #0C4B6E;
     font-size: 1.2rem;
     margin: .5rem;

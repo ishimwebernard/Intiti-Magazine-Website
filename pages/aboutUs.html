@@ -6,18 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/aboutus.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/ico" href="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/favicon.ico?alt=media&token=45b28d68-a6fb-4040-8eed-7c059ef89f9c">
 </head>
 
 <body>
     <div class="content">
+        <div class="purenav" id="pureNav">
+            <div class="navMobile" id="navMobile" >
+                <p class="navitem" onclick="location.href=`../index.html`">Home</p>
+                <p class="navitem" onclick="location.href=`./books-publication.html`">Magazines</p>
+                <p class="navitem" onclick="location.href=`./business.html`">Business</p>
+                <p class="navitem" onclick="location.href=`./tech.html`">Tech</p>
+                <p class="navitem" onclick="location.href=`./culture.html`">Culture</p>
+                <p class="navitem" onclick="location.href=`./religion.html`">Gospel</p>
+                <p class="navitem" onclick="location.href=`./entertainment.html`">Entertainment</p>
+                <p class="navitem" onclick="location.href=`./videoPortal.html`">Video Portal</p>
+                <p class="navitem" onclick="location.href=`./aboutUs.html`">About Us</p>
+            </div>
+            <div class="exiter" onclick="closeBurger()"> </div>
+           </div>
         <img class="advert" id="floaterMadeInRwanda"
         src="../../assets/images/madeInRwanda.png">
         <div class="loader" id="loader"><p>Loading ...</p></div>
 
         <div class="row1">
             <img class="advert"  src="../assets/images/intiti-white.png">
-            <img class="advert" src="../assets/images/intiti-blue.png">
+            <img class="advert" src="../assets/images/intiti-blue.png" id="deepBlue">
+            <div class="hamburger" id="hamburger" onclick="openCloseMobileNav()">
+                <img src="/assets/images/hamburger.png" alt="">
+            </div>
 
         </div>
 
@@ -34,9 +53,9 @@
                 <p class="navitem" onclick="location.href=`./business.html`">Business</p>
                 <p class="navitem" onclick="location.href=`./tech.html`">Tech</p>
                 <p class="navitem" onclick="location.href=`./culture.html`">Culture</p>
-                <p class="navitem" onclick="location.href=`./religion.html`">Religion</p>
+                <p class="navitem" onclick="location.href=`./religion.html`">Gospel</p>
                 <p class="navitem" onclick="location.href=`./entertainment.html`">Entertainment</p>
-                <p class="navitem" onclick="location.href=`../pages/videoPortal.html`">Video Portal</p>
+                <p class="navitem" onclick="location.href=`../videoPortal.html`">Video Portal</p>
                 <p class="navitem">About Us</p>
 
             </div>
@@ -152,6 +171,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- <script src="javascript/index.js"> -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="../javascript/aboutUs.js"></script>
   <script>
     AOS.init({delay: 500});
   </script>
