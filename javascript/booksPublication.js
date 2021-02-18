@@ -35,11 +35,11 @@
                       <p class="bookname">${doc.data().Title}</p>
                   <p class="bookdescription">${doc.data().AuthorName}</p>
                       <div class="start-rating">
-                          <img src="../../assets/images/star-shaded.png" alt="">
-                          <img src="../../assets/images/star-shaded.png" alt="">
-                          <img src="../../assets/images/star-shaded.png" alt="">
-                          <img src="../../assets/images/star-shaded.png" alt="">
-                          <img src="../../assets/images/star-shaded.png" alt="">
+                          <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                          <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                          <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                          <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                          <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
                       </div>
                   </div>
                  

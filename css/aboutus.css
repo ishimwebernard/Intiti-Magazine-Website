@@ -134,6 +134,7 @@
 .blueCards{
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 }
 .blueCards .card{
     display: grid;
@@ -150,7 +151,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-left: 6.36941896024465%;
-    animation: marquee 10s linear infinite;
+    animation: marquee 20s linear infinite;
 
 }
 .recommenders img{
