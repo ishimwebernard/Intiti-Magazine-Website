@@ -21,6 +21,9 @@
     display: flex;
     flex-direction: row;
 }
+.row1 img{
+    width: 50%;
+}
 /* Row with LOGO and navigation bar */
 .row2{
     display: flex;
