@@ -21,6 +21,9 @@
     display: flex;
     flex-direction: row;
 }
+.row1 img{
+    width: 50%;
+}
 /* Row with LOGO and navigation bar */
 .row2{
     display: flex;
@@ -247,7 +250,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
 }
 .row5 .advert-zone{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     padding-left: 10%;
     margin-top: 6rem;
     height: 90%;

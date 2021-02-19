@@ -36,8 +36,8 @@
             background: linear-gradient(1801deg,rgb(172, 172, 172), rgb(224, 224, 224));
         }
         .row1 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: row;
         }
         .back_floater{
     position: fixed;
@@ -52,7 +52,7 @@
 }
         .row1 img{
             object-fit: cover;
-            width: 100%;
+            width: 50%;
         }
         #floaterMadeInRwanda{
             position: fixed;
@@ -445,9 +445,9 @@
         src="../../assets/images/madeInRwanda.png">
         <div class="row1">
             <img  src="../../assets/images/intiti-white.png">
-            <img  src="../../assets/images/intiti-blue.png" id="deepBlue">
+            <img  src="../../assets/Animee/Made-in-rwanda-slide.gif" id="deepBlue">
         </div>
-        <div class="row2">
+        <!-- <div class="row2">
 
             <div class="navbar">
                 <p class="navitem" onclick="location.href=`../index.html`">Home</p>
@@ -461,7 +461,7 @@
                 <p class="navitem">About Us</p>
 
             </div>
-        </div>
+        </div> -->
         <div class="main">
             <div class="col1">
                 <img src="{{Picture}}" alt="">
