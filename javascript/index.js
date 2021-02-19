@@ -144,11 +144,10 @@ function loadBooks() {
     db.collection('books').get().then((qSnapShot) => {
 
         qSnapShot.forEach((doc) => {
-            fullBooks.push(doc.data());
             var SLICED = String(doc.data().Body).slice(0, 70);
 
              let prepared = `
-            <div class="news-card" onclick="openBook('${doc.data().Title}')" >
+            <div class="news-card" onclick="location.href='./pages/books-publication.html'" >
             <img src="${doc.data().Picture}"  alt="" class="news-image">
             
             <div class="informations">
