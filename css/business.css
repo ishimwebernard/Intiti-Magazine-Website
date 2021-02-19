@@ -65,7 +65,7 @@
     color: #D52A31;
 }
 .row3{
-    background-image: url('https://www.esa.int//var/esa/storage/images/about_us/business_with_esa/business_opportunities/19716978-3-eng-GB/Business_Opportunities_pillars.jpg');
+    background-image: url('../assets/images/businessbackground.jpg');
     height: 200px;
     width: 100%;
     background-size: cover;
@@ -76,7 +76,7 @@
 }
 .row3 p{
     width: 50%;
-    background: rgba(31, 30, 30, 0.1);
+    background: linear-gradient( rgba(255, 255, 255, 0.377),rgba(255,255,255,0.3));
     backdrop-filter: blur(20px);
     height: 100%;
     font-size: 3rem;

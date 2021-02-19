@@ -64,7 +64,7 @@
     color:  #D52A31 ;
 }
 .row3{
-    background-image: url('https://cdn.shortpixel.ai/spai/w_713+q_+ret_img+to_webp/https://giveitanudge.com/wp-content/uploads/2019/03/Entertainment-900x540-c-default.jpg');
+    background-image: url('../assets/images/entertainmentbackground.jpg');
     height: 200px;
     width: 100%;
     background-size: cover;
@@ -75,7 +75,7 @@
 }
 .row3 p{
     width: 50%;
-    background: rgba(31, 30, 30, 0.1);
+    background: linear-gradient( rgba(255, 255, 255, 0.377),rgba(255,255,255,0.3));
     backdrop-filter: blur(20px);
     height: 100%;
     font-size: 3rem;

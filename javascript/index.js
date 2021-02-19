@@ -22,6 +22,7 @@
         }).catch((error) => {
         });
         loadMainArticle();
+        loadBooks();
         function openCloseMobileNav(){
             document.getElementById('navMobile').style.display = 'grid'
         
@@ -95,6 +96,7 @@
         loadAnySection('religion', document.getElementById('religion'));
         loadAnySection('culture', document.getElementById('culture'));
         loadAnySection('tech', document.getElementById('tech'));
+        //loadAnySection('tech', document.getElementById('tech'));
         function loadAnySection(section, correspondant) {
             loader.style.display = "block";
             let MINIMUMNUMBER = 0; 
@@ -126,6 +128,8 @@
             
         }
          
+
+
 function ONW(Body, _date, Picture, Title,Writer){
     fetch('./pages/Templates/articleRender.html').then(response=> response.text()).then((data)=>{
         let s = data.toString().replace('{{Body}}', Body).replace('{{Title}}', Title).replace('{{Picture}}', Picture).replace('{{Date}}', _date).replace('{{Writer}}', Writer);
@@ -133,6 +137,41 @@ function ONW(Body, _date, Picture, Title,Writer){
         document.write(s);
         
     })
+}
+function loadBooks() {
+    loader.style.display = "block";
+    var mainDocument = document.getElementById('others');
+    db.collection('books').get().then((qSnapShot) => {
+
+        qSnapShot.forEach((doc) => {
+            fullBooks.push(doc.data());
+            var SLICED = String(doc.data().Body).slice(0, 70);
+
+             let prepared = `
+            <div class="news-card" onclick="openBook('${doc.data().Title}')" >
+            <img src="${doc.data().Picture}"  alt="" class="news-image">
+            
+            <div class="informations">
+                <p class="bookname">${doc.data().Title}</p>
+            <p class="bookdescription">${doc.data().AuthorName}</p>
+                <div class="start-rating">
+                    <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                    <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                    <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                    <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                    <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                </div>
+            </div>
+           
+        </div>
+  `;
+  mainDocument.innerHTML += prepared;
+
+        })
+    }).then(() => {
+        loader.style.display = "none";
+    })
+
 }
 let content = document.getElementsByClassName('content')[0];
 function openCloseMobileNav(){
