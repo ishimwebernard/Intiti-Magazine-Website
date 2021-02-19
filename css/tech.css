@@ -77,6 +77,7 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 50px 0 50px 0;
+    overflow: hidden;
 }
 .row3 p{
     width: 50%;
