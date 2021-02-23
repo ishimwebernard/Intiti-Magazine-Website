@@ -132,5 +132,4 @@ document.getElementById('pureNav').style.display = 'none';
 }
 let content = document.getElementsByClassName('content')[0];
 setTimeout(()=>{
-    document.getElementById('floaterMadeInRwanda').style.display = "block";
 }, 2500);
