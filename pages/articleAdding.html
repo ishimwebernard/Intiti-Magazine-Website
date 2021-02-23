@@ -33,7 +33,7 @@
         padding: 5px;
     }
     .loader{
-        position: absolute;
+        position: fixed;
         background: url('../assets/Animee/35.gif');
         background-size: cover;
         background-repeat: no-repeat;
@@ -137,9 +137,9 @@
         function uploadArticle() {
             let loader = document.getElementById('loader');
             loader.style.display = 'block';
-        let title = String(document.getElementById('title').value).replace("\'", " ").replace("\"", " ").replace("\`", " ");
-        let body = String(document.getElementById('body').value).replace("\'", " ").replace("\"", " ").replace("\`", " ");
-        let writer = String(document.getElementById('writer').value).replace("\'", " ").replace("\"", " ").replace("\`", " ");
+        let title = String(document.getElementById('title').value).replaceAll("\'", " ").replaceAll("\"", " ").replaceAll("\`", " ");
+        let body = String(document.getElementById('body').value).replaceAll("\'", " ").replaceAll("\"", " ").replaceAll("\`", " ");
+        let writer = String(document.getElementById('writer').value).replaceAll("\'", " ").replaceAll("\"", " ").replaceAll("\`", " ");
         let section = document.getElementById('typeOfArticle').value;
             var storageRef = firebase.storage().ref();
             var toDay = new Date();
@@ -149,7 +149,7 @@
 
                 const fileDirectory = snapshot.ref.getDownloadURL().then(url=>{
                     let newUrl = String(url);
-                    let trimedTitle = String(title).replace(' ', '_');
+                    let trimedTitle = String(title).replaceAll(' ', '_');
                     firebase.firestore().collection(`${section}`).add({
                         "Title": `${title}`,
                         "Picture": `${newUrl}`,
