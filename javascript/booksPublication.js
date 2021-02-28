@@ -25,8 +25,6 @@
 
               qSnapShot.forEach((doc) => {
                   fullBooks.push(doc.data());
-                  var SLICED = String(doc.data().Body).slice(0, 70);
-
                    let prepared = `
                   <div class="news-card" onclick="openBook('${doc.data().Title}')" >
                   <img src="${doc.data().Picture}"  alt="" class="news-image">
@@ -87,7 +85,4 @@ function openCloseMobileNav(){
 }
 function closeBurger(){
 document.getElementById('pureNav').style.display = 'none';
-
 }
-      setTimeout(()=>{
-      }, 2500);

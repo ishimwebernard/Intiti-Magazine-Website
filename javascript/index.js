@@ -16,18 +16,14 @@
         const loader = document.getElementById('loader');
 
         var db = firebase.firestore();
-        db.collection('mainArticles').get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-            });
-        }).catch((error) => {
-        });
         loadMainArticle();
         loadBooks();
+        loadVideosToCards();
         function openCloseMobileNav(){
             document.getElementById('navMobile').style.display = 'grid'
         
     }
-    loadVideosToCards();
+
         function loadMainArticle() {
             var row3 = document.getElementById('row3');
             loader.style.display = "block";
@@ -86,8 +82,6 @@
             })
             
 
-        }
-        function setBackground(id, bg){
         }
 
         loadAnySection('news', document.getElementById('news'));

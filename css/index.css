@@ -203,7 +203,6 @@ h3{
 .row5 .news-sports-section .news-au-sixth{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    height: 25rem;
     margin-top: 3rem;
 }
 
@@ -306,7 +305,11 @@ h3{
     top: 1rem;
 
 }
-
+.row5 .news-sports-section .news-au-sixth .news-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
 
 
 
@@ -517,6 +520,7 @@ box-shadow:  5px 5px 10px #e8e8e8,
     .row5 .news-sports-section .news-au-sixth{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
     #hamburger img{
         display: block;
     }
