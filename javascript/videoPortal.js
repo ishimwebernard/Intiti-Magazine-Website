@@ -23,7 +23,7 @@
                 snapshot.forEach((doc)=>{
                     allVideos.innerHTML += `
                     <div class="video" onclick="openVideo('${doc.data().videoSource}')">
-                    <img src="${doc.data().videoThumbNail}" alt="">
+                    <img src="../assets/images/play.png"  style="background-image: url('${doc.data().videoThumbNail}')" alt="">
                     <p class="tag"><span>Video</span></p>
                     <p>${doc.data().videoName}</p>
                 </div>

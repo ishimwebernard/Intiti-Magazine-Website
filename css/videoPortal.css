@@ -88,6 +88,7 @@
 .mainVideos .fullPart .allVideos .video img{
     width: 100%;
     height: 150px;
+    background-size: cover;
 }
 .mainVideos .fullPart .allVideos .video p{
     font-weight: 300;
