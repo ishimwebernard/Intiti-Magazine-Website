@@ -441,8 +441,6 @@
 <body>
     <div class="content">
         <button class="back_floater" onclick="location.reload()">Back</button>
-        <img class="advert" id="floaterMadeInRwanda"
-        src="../../assets/images/madeInRwanda.png">
         <div class="row1">
             <img  src="../../assets/images/intiti-white.png">
             <img  src="../../assets/Animee/Made-in-rwanda-slide.gif" id="deepBlue">
@@ -498,27 +496,27 @@
               <div class="bookDetails">
                   <div class="bookDetail">
                       <P class="indicator">Print size</P>
-                      <img src="../../assets/images/printsize.png" alt="">
+                      <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/printsize.png?alt=media&token=6e372a7c-b180-4eb7-9d84-a2cecbb95cac" alt="">
                       <p class="value">1000 Pages</p>
                   </div>
                   <div class="bookDetail">
                     <P class="indicator">Language</P>
-                    <img src="../../assets/images/lang.png" alt="">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/lang.pngMonFeb15202112%3A55%3A59GMT%2B0200(CentralAfricaTime)?alt=media&token=782b1c46-ba5c-4a83-ab5f-922dfecb95af" alt="">
                     <p class="value">{{Language}}</p>
                 </div>
                 <div class="bookDetail">
                     <P class="indicator">Publisher</P>
-                    <img src="../../assets/images/publish.png" alt="">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/publish.png?alt=media&token=f9fe03bd-6c5d-407e-b8a8-6a362f8d3cd5" alt="">
                     <p class="value">{{Publisher}}</p>
                 </div>
                 <div class="bookDetail">
                     <P class="indicator">Publish date</P>
-                    <img src="../../assets/images/date.png" alt="">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/date.png?alt=media&token=fa375850-09a6-4f14-9e65-0aa1fc67e6e9" alt="">
                     <p class="value">{{DatePublished}}</p>
                 </div>
                 <div class="bookDetail">
                     <P class="indicator">File size</P>
-                    <img src="../../assets/images/file.png" alt="">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/file.png?alt=media&token=dcc6ce7c-3727-4f4c-8277-8adf5844df5b" alt="">
                     <p class="value">{{FileSize}} KB</p>
                 </div>
               </div>
@@ -536,7 +534,7 @@
                 <button class="specialButton" onclick="{{onclickCommand}}">Purchase Book</button>
             </div>
         </div>
-        <div class="fullOtherBooks">
+        <!-- <div class="fullOtherBooks">
             <div class="otherbooks">
                 <p class="otherbooksinthestore">Readers also liked</p>
                 <div class="others">
@@ -662,7 +660,7 @@
                 <img src="../../assets/Animee/Heineken_-1.gif" alt="">
               
             </div>
-        </div>
+        </div> -->
 
         <div class="footer">
 
@@ -723,9 +721,7 @@
     <script>
         let content = document.getElementsByClassName('content')[0];
 content.scrollIntoView({behavior: "smooth"});
-setTimeout(()=>{
-    document.getElementById('floaterMadeInRwanda').style.display = "block";
-}, 2500);
+
 
 function openCloseMobileNav(){
     document.getElementById('pureNav').style.display = 'grid'
