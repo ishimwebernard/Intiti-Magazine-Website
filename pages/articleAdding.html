@@ -55,10 +55,28 @@
         color: #000;
       
     }
+    .loginFirst{
+        display: flex;
+        top: 0;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgb(160, 160, 160);
+        justify-content: center;
+        padding-left: 20%;
+        padding-right: 20%;
+        width: 60%;
+    }
 </style>
 <body>
     <div class="content">
-        
+        <div class="loginFirst" id="loginFirst">
+            <h1>ENTER YOUR EMAIL AND PASSWORD</h1>
+            <input type="text" placeholder="Enter your email" id="authemail">
+            <input type="password" placeholder="Enter your password" id="authpassword">
+            <button onclick="login()">Authenticate</button>
+        </div>
         <div class="loader" id="loader">
             <p id="ldng">Uploading, Wait ...</p>
         </div>
@@ -165,6 +183,15 @@
             
         }
        // uploadBook();
+       function login(){
+        firebase.auth().signInWithEmailAndPassword(document.getElementById('authemail').value, document.getElementById('authpassword').value)
+            .then((userCredential) => {
+            document.getElementById('loginFirst').style.display = 'none';
+        })
+        .catch((error) => {
+            alert(error);
+  });
+       }
         async function uploadBook(){
             let uploadObject = {
                 AboutAuthor: document.getElementById('AboutAuthor').value,
