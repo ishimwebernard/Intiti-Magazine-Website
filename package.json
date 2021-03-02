@@ -1,0 +1,22 @@
+{
+  "name": "intiti-magazine-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishimwebernard/Intiti-Magazine-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishimwebernard/Intiti-Magazine-Website/issues"
+  },
+  "homepage": "https://github.com/ishimwebernard/Intiti-Magazine-Website#readme",
+  "dependencies": {
+    "firebase-tools": "^9.5.0"
+  }
+}
