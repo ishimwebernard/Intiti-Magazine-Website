@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/ico" href="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/favicon.ico?alt=media&token=45b28d68-a6fb-4040-8eed-7c059ef89f9c">
+</head>
+
+<body>
+    <div class="content">
+        
+       <div class="purenav" id="pureNav">
+        <div class="navMobile" id="navMobile" >
+            <p class="navitem">Home</p>
+            <p class="navitem" onclick="location.href=`./pages/books-publication.html`">Magazines</p>
+            <p class="navitem" onclick="location.href=`./pages/business.html`">Business</p>
+            <p class="navitem" onclick="location.href=`./pages/tech.html`">Tech</p>
+            <p class="navitem" onclick="location.href=`./pages/culture.html`">Culture</p>
+            <p class="navitem" onclick="location.href=`./pages/religion.html`">Gospel</p>
+            <p class="navitem" onclick="location.href=`./pages/entertainment.html`">Entertainment</p>
+            <p class="navitem" onclick="location.href=`./pages/videoPortal.html`">Video Portal</p>
+            <p class="navitem" onclick="location.href=`./pages/aboutUs.html`">About Us</p>
+        </div>
+        <div class="exiter" onclick="closeBurger()"> </div>
+       </div>
+        <div class="loader" id="loader"><p>Loading ...</p></div>
+
+        <div class="row1">
+            <img class="advert"  src="./assets/images/intiti-white.png">
+            <img class="advert"  src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/Made-in-rwanda-slide.gif?alt=media&token=d74af4ed-9c07-46f0-a3cb-bacab6c1a9a4" id="deepBlue">
+            <div class="hamburger" id="hamburger" onclick="openCloseMobileNav()">
+                <img src="https://res.cloudinary.com/bn47/image/upload/v1613662510/hamburger_b93xmn.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="row2">
+            
+            <div class="navbar">
+                <p class="navitem">Home</p>
+                <p class="navitem" onclick="location.href=`./pages/books-publication.html`">Magazines</p>
+                <p class="navitem" onclick="location.href=`./pages/business.html`">Business</p>
+                <p class="navitem" onclick="location.href=`./pages/tech.html`">Tech</p>
+                <p class="navitem" onclick="location.href=`./pages/culture.html`">Culture</p>
+                <p class="navitem" onclick="location.href=`./pages/religion.html`">Gospel</p>
+                <p class="navitem" onclick="location.href=`./pages/entertainment.html`">Entertainment</p>
+                <p class="navitem" onclick="location.href=`../pages/videoPortal.html`">Video Portal</p>
+                <p class="navitem" onclick="location.href=`../pages/aboutUs.html`">About Us</p>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="row3" id="row3">
+            <div class="mainArticle">
+                <h3>Main Title</h3>
+            </div>
+            <div class="secondaryItems">
+                <div class="secondaryRow">
+                    <div class="secArticle">
+                        <p class="title">Some main Title</p>
+                        <p class="tag"></p>
+                    </div>
+                    <div class="secArticle">
+                        <p class="title">Some main Title</p>
+                        <p class="tag"></p>
+                    </div>
+                </div>
+                <div class="secondaryRow">
+                    <div class="secArticle">
+                        <p class="title">Some main Title</p>
+                        <p class="tag"></p>
+                    </div>
+                    <div class="secArticle">
+                        <p class="title">Some main Title</p>
+                        <p class="tag"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row4">
+            <div class="advert"></div>
+            <div class="advert"></div>
+        </div>
+
+
+
+
+
+
+        <div class="row5">
+            <div class="news-sports-section">
+                <h3 class="section-header" id="news-header">News</h3>
+
+                <div class="news-au-pair" id="news">
+                    <!-- <div class="news-card">
+                        <img src="./assets/images/sample-slideshow.png" alt="" class="news-image">
+                        <p class="news-header">News Header</p>
+                        <p class="news-content">
+                            Sed pretium efficitur nulla, at euismod urna lacinia imperdiet. Quisque cursus tempus elit nec suscipit. Donec augue odio, 
+                        </p>
+                    </div>
+                    <div class="news-card">
+                        <img src="./assets/images/sample-slideshow.png" alt="" class="news-image">
+                        <p class="news-header">News Header</p>
+                        <p class="news-content">
+                            Sed pretium efficitur nulla, at euismod urna lacinia imperdiet. Quisque cursus tempus elit nec suscipit. Donec augue odio,  
+                        </p>
+                    </div>
+                    <div class="news-card">
+                        <img src="./assets/images/sample-slideshow.png" alt="" class="news-image">
+                        <p class="news-header">News Header</p>
+                        <p class="news-content">
+                            Sed pretium efficitur nulla, at euismod urna lacinia imperdiet. Quisque cursus tempus elit nec suscipit. Donec augue odio,
+                        </p>
+                    </div> -->
+
+
+                </div>
+                <h3 class="section-header" id="news-header">Gospel</h3>
+
+                <div class="news-au-pair" id="religion">
+           
+
+
+                </div>
+                <h3 class="section-header" id="sports-header">Magazines Publication</h3>
+                <div class="news-au-sixth" id="others">
+
+                    <!-- <div class="news-card">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/intiti-magazine.JPG?alt=media&token=b1190662-01ca-44b6-ba8d-896e60728cd6" alt="" class="news-image">
+
+                        <div class="other">
+                            <p class="bookname">Rwanda and Agriculture</p>
+                            <p class="bookdescription">Business</p>
+                            <div class="start-rating">
+
+                                <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                                <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                                <img src="https://res.cloudinary.com/bn47/image/upload/v1613659559/star-shaded_pah0nb.png" alt="">
+                            </div>
+                        </div>
+
+                    </div> -->
+                </div>
+
+            </div>
+            <div class="advert-zone">
+                <img src="./assets/Animee/Africa-Improved-Food-1.gif" alt="">
+                <img src="./assets/Animee/Heineken_-1.gif" alt="">
+                <img src="./assets/Animee/Sorwathe02.gif" alt="">
+            </div>
+        </div>
+
+
+        
+
+        <div class="row6">
+            <div class="intro-container">
+                <div class="col1">
+                    <h1>Video Portal</h1>
+                    <p>Most interesting videos from Intiti.com</p>
+                </div>
+                <div class="col2">
+                    <a href="./pages/videoPortal.html">Visit the video portal</a>
+                </div>
+            </div>
+            <div class="video-cluster" id="videoClusters">
+                <!-- <div class="video" onclick="openVideo('${doc.data().videoSource}')">
+                    <img src="./assets/images/culture.png" alt="">
+                    <p class="tag"><span>Video</span></p>
+                    <p>${doc.data().videoName}</p>
+                </div> -->
+      
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="row5">
+            <div class="news-sports-section">
+                <h3 class="section-header" id="news-header">Entertainment</h3>
+
+                <div class="news-au-pair" id="entertainment">
+                </div>
+                <h3 class="section-header" id="sports-header">Business</h3>
+
+                <div class="news-au-pair" id="business">
+                    
+                </div>
+                <h3 class="section-header" id="news-header">Culture</h3>
+             
+
+                <div class="news-au-pair" id="culture">
+                </div>
+
+            </div>
+            <div class="advert-zone">
+                <img src="./assets/Animee/Sahara-low.gif" alt="">
+                <img src="./assets/Animee/Export-Import.gif" alt="">
+                <img src="./assets/Animee/MADE-IN-RWANDA-SIMA.gif" alt="">
+            </div>
+        </div>
+        <div class="row5">
+            <div class="news-sports-section">
+              
+                <h3 class="section-header" id="news-header">Tech</h3>
+             
+
+                <div class="news-au-pair" id="tech">
+                </div>
+
+            </div>
+     
+
+        </div>
+
+
+
+
+        <div class="footer">
+
+            <div class="footer-group">
+                <h2>Contact Info</h2>
+                <div class="footer-item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/location.png?alt=media&token=7eebba8a-4fdc-4124-bdaf-f1177cfe41b2" alt="" class="footer-image">
+                    <p class="footer-detail">Kanombe<br>KN XXX ST</p>
+                </div>
+                <div class="footer-item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/phone.png?alt=media&token=7997ccf5-c47d-4b3a-92d6-e8dc09dacf3c" alt="" class="footer-image">
+                    <p class="footer-detail">+250 735 0000</p>
+                </div>
+                <div class="footer-item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/message.png?alt=media&token=422cafa9-97a2-4543-a6b6-fe93f1577ade" alt="" class="footer-image">
+                    <p class="footer-detail">intiti@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-group">
+                <h2>Working hours</h2>
+                <div class="footer-item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/clock.png?alt=media&token=54ae5109-b5c6-4c3b-92c8-3eacc8a6a1d5" alt="" class="footer-image">
+                    <p class="footer-detail">8:00AM-8:00PM</p>
+                </div>
+
+            </div>
+
+            <div class="footer-group">
+                <h2>Our Services</h2>
+                <div class="footer-item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/circle.png?alt=media&token=39dd9177-0a7d-4463-b5fb-3975682ef40c" alt="" class="footer-image">
+                    <p class="footer-detail">Web design and development</p>
+                </div>
+                <div class="footer-item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/circle.png?alt=media&token=39dd9177-0a7d-4463-b5fb-3975682ef40c" alt="" class="footer-image">
+                    <p class="footer-detail">Software development</p>
+                </div>
+                <div class="footer-item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/circle.png?alt=media&token=39dd9177-0a7d-4463-b5fb-3975682ef40c" alt="" class="footer-image">
+                    <p class="footer-detail">Graphics design</p>
+                </div>
+                <div class="footer-item">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/circle.png?alt=media&token=39dd9177-0a7d-4463-b5fb-3975682ef40c" alt="" class="footer-image">
+                    <p class="footer-detail">Elaboration Strategy</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+    <script src="javascript/index.js">
+    </script>
+</body>
+
+</html>

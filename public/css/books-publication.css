@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Assistant', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    background: #f8f8f8;
+    /* overflow-x: hidden; */
+
+}
+#hamburger img{
+    height: 20px;
+    width: 40px;
+    display: none;
+}
+.purenav{
+    display: none;
+    grid-template-columns: 2fr 1fr;
+    position: fixed;
+    z-index: 1 ;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+
+}
+.purenav .exiter{
+    background: #000;
+    opacity: 50%;
+}
+.navMobile{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-bottom: 10px;
+    background: #f8f8f8;
+    padding-top: 20px;
+}
+.navMobile p{
+    font-size: 2rem;
+    margin-left: 10%;
+    margin-top: 2px;
+}
+
+/* row for adverts */
+
+.row1{
+    display: flex;
+    flex-direction: row;
+}
+.row1 img{
+    width: 50%;
+    object-fit: contain;
+
+}
+/* Row with LOGO and navigation bar */
+.row2{
+    display: flex;
+    flex-direction: row;
+    background: url("https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/imigongo.png?alt=media&token=db0b4bc9-d91c-42d9-ac65-12d74b81fbec");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.row2 img{
+    padding:0;
+    margin:0;
+    width: 15.3%;
+    margin-left: 1.97584097859327%;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.row2 .navbar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 3.96941896024465%;
+    margin-top: 1.45259938837921%;
+    margin-bottom: 1.45259938837921%;
+    width: 100%;
+}
+.row2 .navbar p:nth-child(2){
+    color:  #D52A31 ;
+}
+.row2 .navbar p{
+    margin-left: 2.67584097859327%;
+    font-weight: 600;
+    height: 100%;
+    color: #535353;
+    cursor: pointer;
+    border: 4px transparent;
+}
+
+
+
+
+
+.row3{
+    background-image: url('../assets/images/magazinebackground.jpg');
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0 50px 0;
+    overflow: hidden;
+}
+.row3 p{
+    width: 50%;
+    background: linear-gradient( rgba(255, 255, 255, 0.377),rgba(255,255,255,0.3));
+    backdrop-filter: blur(30px);
+    height: 100%;
+    font-size: 3rem;
+    color: #fff;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+.fullOtherBooks{
+    display: grid;
+    grid-template-columns: 3.5fr 1fr;
+    margin-top: 10px;
+}
+.otherbooks .others{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+}
+.otherbooks .others .news-card{
+    padding-bottom: 10%;
+    width: 95%;
+    margin-top: 10px;
+    box-shadow:  5px 5px 10px #e8e8e8, 
+             5px -5px 10px #ffffff;
+}
+.otherbooks .others .news-card img{
+    height: 250px;
+    width: 100%;
+}
+.otherbooks .others .news-card .informations .start-rating{
+    display: flex;
+    flex-direction: row;
+}
+.otherbooks .others .news-card .informations .start-rating img{
+    height: 20px;
+    width: 20px;
+}
+.otherbooks .others .news-card .informations .bookname{
+    font-weight: 600;
+   
+}
+.otherbooks .otherbooksinthestore{
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+.fullOtherBooks .animee img{
+    height: 350px;
+    width: 90%;
+}
+
+
+
+.footer{
+    background: #0C4B6E;
+    display: grid;
+    padding: 3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 3rem;
+}
+.footer .footer-item p{
+    font-size: 1rem;
+    color: #fff;
+}
+.footer .footer-item{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.footer .footer-group h2{
+    color: #fff;
+    font-size: 2rem;
+}
+.footer .footer-item img{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-right: .5rem;
+}
+#loader{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 90%;
+
+}
+#loader p{
+    position: fixed;
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 500;
+    top: 50%;
+    font-size: 2rem;
+    left: 45%;
+}
+
+
+
+
+
+@media only screen and (min-width:  0px) and (max-width: 860px){
+    *{
+        font-size: 14px;
+    }
+    .row5{
+        display: flex;
+
+    }
+    .row5 .news-sports-section .news-au-pair{
+        grid-template-columns: 1fr 1fr;
+    }
+    .row5 .advert-zone{
+        display: none;
+    }
+    #floaterMadeInRwanda{
+        position: fixed;
+        height: 0;
+        width: 0;
+        margin-left: 92.5%;
+        display: none;
+        animation-name: YAMAHA_ANIMEE;
+        animation-duration: 1s;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #hamburger img{
+        display: block;
+    }
+    
+    .row2{
+        display: none;
+    }
+    .row1{
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+    }
+    .row1 .advert{
+        width: 90%;
+    }
+    .row1 .hamburger{
+        margin-top: 15px;
+    }
+    #deepBlue{
+        display: none;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .fullOtherBooks{
+        display: flex;
+    }
+    .fullOtherBooks .animee{
+        display: none;
+    }
+    .otherbooks .others{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+
+}
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    *{
+        font-size: 12px;;
+    }
+        .row3{
+        display: flex;
+        flex-direction: column;
+    } 
+     .row3 .mainArticle{
+        height: 250px;
+        width: 100%;
+    }
+    .row1 .hamburger{
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    #hamburger img{
+        width: 20px;
+        height: 15px;
+    }
+    .row5 .news-sports-section .news-au-pair{
+        display: flex;
+        flex-direction: column;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr;
+    }
+    .otherbooks .others{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 299px){
+    *{
+        font-size: 10px;
+    }
+  
+}
+
