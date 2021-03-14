@@ -101,6 +101,8 @@
             <option value="culture">Culture</option>
             <option value="religion">Gospel</option>
             <option value="entertainment">Entertainment</option>
+            <option value="presenter">Presenter</option>
+            <option value="main">Main</option>
           </select>
        </div>
        <div class="r">
@@ -160,7 +162,8 @@
         let writer = String(document.getElementById('writer').value).replaceAll("\'", " ").replaceAll("\"", " ").replaceAll("\`", " ");
         let section = document.getElementById('typeOfArticle').value;
             var storageRef = firebase.storage().ref();
-            var toDay = new Date();
+            let t = new Date();
+            let toDay = t.getDate()+"-"+t.getMonth()+"-"+t.getFullYear();
             var userStorageRef = storageRef.child('m'+toDay);
             const selectedFile = document.getElementById('file').files[0];
             userStorageRef.put(selectedFile).then(function(snapshot) {
@@ -168,7 +171,8 @@
                 const fileDirectory = snapshot.ref.getDownloadURL().then(url=>{
                     let newUrl = String(url);
                     let trimedTitle = String(title).replaceAll(' ', '_');
-                    firebase.firestore().collection(`${section}`).add({
+                    if(`${section}` != `main`){
+                        firebase.firestore().collection(`${section}`).add({
                         "Title": `${title}`,
                         "Picture": `${newUrl}`,
                         "Body": `${body}`,
@@ -178,6 +182,18 @@
                     }).then(()=>{
                         loader.style.display = 'none';
                     });
+                    }else{
+                        firebase.firestore().collection(`${section}`).doc(`main`).set({
+                        "Title": `${title}`,
+                        "Picture": `${newUrl}`,
+                        "Body": `${body}`,
+                        "Writer": `${writer}`,
+                        "_Date": toDay
+
+                    }).then(()=>{
+                        loader.style.display = 'none';
+                    });
+                    }
                 });
             });
             
@@ -246,6 +262,7 @@
                 alert(error);
             })
         }
+       
     </script>
 </body>
 </html>

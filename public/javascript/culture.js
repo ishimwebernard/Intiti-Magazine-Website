@@ -96,13 +96,13 @@
                     var SLICED = String(doc.data().Body).slice(0, 70);
           
                         mainDocument.innerHTML += `
-                        <div class="news-card" onclick="ONW('${String(doc.data().Body).replaceAll('\'', " ").replaceAll('\"', " ").replaceAll('\`', " ").replaceAll('’', '').replaceAll('‘', ' ').replace(/[^a-zA-Z ]/g, "")}',
-                        '${String(doc.data()._Date).replaceAll('\'', " ").replaceAll('\"', " ").replaceAll('\`', " ").replaceAll('’', '').replaceAll('‘', ' ').replace(/[^a-zA-Z ]/g, "")}', 
+                        <div class="news-card" onclick="ONW('${String(doc.data().Body).replace(/[^a-zA-Z0-9 <>,./]/g, "")}',
+                        '${String(doc.data()._Date).replace(/[^a-zA-Z0-9 <>,./-]/g, "")}', 
                         '${doc.data().Picture}',
-                        '${String(doc.data().Title).replaceAll('\'', " ").replaceAll('\"', " ").replaceAll('\`', " ").replaceAll('’', '').replaceAll('‘', ' ').replace(/[^a-zA-Z ]/g, "")}',
-                        '${String(doc.data().Writer).replaceAll('\'', " ").replaceAll('\"', " ").replaceAll('\`', " ").replaceAll('’', '').replaceAll('‘', ' ').replace(/[^a-zA-Z ]/g, "")}')">
+                        '${String(doc.data().Title).replace(/[^a-zA-Z0-9 <>,./]/g, "")}',
+                        '${String(doc.data().Writer).replace(/[^a-zA-Z0-9 <>,./]/g, "")}')">
                                 <img src="${doc.data().Picture}" alt="" class="news-image">
-                                <p class="news-header">${String(doc.data().Title).replaceAll('’', '')}</p>
+                                <p class="news-header">${String(doc.data().Title).replace(/[^a-zA-Z0-9 <>,./]/g, "")}</p>
                                 <p class="news-content">
                                       ${SLICED}
                                 </p>
