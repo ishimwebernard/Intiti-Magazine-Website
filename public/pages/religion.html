@@ -4,12 +4,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/religion.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Intiti Magazine</title>
 </head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
 
+    /* overflow-x: hidden; */
+
+}
+
+
+/* row for adverts */
+
+.row1{
+    display: flex;
+    flex-direction: row;
+}
+.row1 img{
+    width: 50%;
+}
+/* Row with LOGO and navigation bar */
+.row2{
+    display: flex;
+    flex-direction: row;
+    background: url("https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/imigongo.png?alt=media&token=db0b4bc9-d91c-42d9-ac65-12d74b81fbec");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.row2 img{
+    padding:0;
+    margin:0;
+    width: 15.3%;
+    margin-left: 1.97584097859327%;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.row2 .navbar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 3.96941896024465%;
+    margin-top: 1.45259938837921%;
+    margin-bottom: 1.45259938837921%;
+    width: 100%;
+}
+
+.row2 .navbar p{
+    margin-left: 2.67584097859327%;
+    font-weight: 600;
+    height: 100%;
+    color: #535353;
+    cursor: pointer;
+    border: 4px transparent
+}
+
+
+
+.row2 .navbar p:nth-child(6){
+    color:  #D52A31 ;
+}
+.row3{
+    background-image: url('../assets/images/gospelbackground.jpg');
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden;
+}
+.row3 p{
+    width: 50%;
+    background: rgba(0, 0, 0, 0.438);
+    height: 100%;
+    font-size: 3rem;
+    color: #fff;
+    border-radius: 2px;;
+}
+
+.row5 .news-sports-section{
+    overflow-y: hidden;
+
+} 
+.row5 .news-sports-section .news-au-sixth{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 25rem;
+    margin-top: 3rem;
+}
+
+.row5 .news-sports-section .news-au-sixth:nth-child(1){
+    margin-top: 2rem;
+    display: none;
+}
+
+
+
+ .news-au-sixth .news-image{
+    width: 100%;
+    height: 100%;
+}
+
+.news-au-sixth .news-card:hover .news-image{
+    opacity: 60%;
+
+}
+ .news-au-sixth .news-card:hover{
+    background: #eeeeee;
+}
+
+ .news-au-sixth .news-card .other{
+    padding: 5%;
+}
+
+
+ .news-au-sixth .news-card .bookname{
+    padding: 0;
+    width: 100%;
+    margin:0;
+    font-weight: 600;
+}
+ .news-au-sixth .news-card .bookdescription{
+    padding: 0;
+    width: 100%;
+    margin:0;
+    opacity: 60%;
+}
+
+
+
+
+
+.row3 .floater{
+    background: #000;
+    opacity: 65%;
+    padding: 1%;
+}
+.row3 .floater p{
+    color: #fff;
+    font-size: 2rem;
+    opacity: 1;
+}
+.row5{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    overflow-y: hidden;
+}
+.row5 .latestnews{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 6rem;
+}
+.row5 .latestnews h2{
+    padding: 1rem;
+    background:rgb(218, 218, 218);
+}
+.row5 .latestnews p{
+    padding: 1rem;
+    border-left: 4px #D52A31 solid;
+    margin-top: .1rem;
+    color: #fff;
+    background: linear-gradient(180deg, rgb(49, 49, 49), rgb(17, 17, 17));
+    font-weight: 600;
+    text-shadow: .9px .9px rgb(156, 156, 156);
+    cursor: pointer;
+}
+.row5 .latestnews p:hover{
+    background: linear-gradient(180deg, #158dce, #0C4B6E);
+    color: #fff;
+}
+.row5 .mainLNews{
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.row5 .mainLNews p{
+    /* margin-top: 32.85%; */
+    font-weight: 600;
+    background: #000;
+    color: #fff;
+    opacity: 80%;
+    padding: .5rem;
+    top: 1rem;
+
+}
+
+
+
+
+.row5 .news-sports-section .section-header{
+    color: #535353;
+    font-size: 2rem;
+    margin-top: 3rem;
+    border-bottom:1px #a5a5a5 solid;
+
+}
+.row5 .news-sports-section .news-au-pair{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.row5 .news-sports-section .news-au-pair .news-card img{
+    width: 100%;
+    height: 9rem;
+    border: none;
+
+}
+.row5 .news-sports-section .news-au-pair .news-card{
+    margin-left: 5%;
+    cursor: pointer;
+box-shadow:  5px 5px 10px #e8e8e8, 
+             5px -5px 10px #ffffff;
+     padding-bottom: 1rem;      
+     margin-bottom: 1rem;  
+}
+
+.row5 .news-sports-section .news-au-pair .news-card:hover img{
+    opacity: 80%;
+}
+
+
+.row5 .news-sports-section .news-au-pair .news-card .news-header{
+    font-weight: 500;
+    color: #0C4B6E;
+    font-size: 1.2rem;
+    margin: .5rem;
+}
+
+.row5 .news-sports-section .news-au-pair .news-card .news-content{
+    color: #535353;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+#sports-header{
+    border-bottom:1px #a5a5a5 solid;
+
+}
+.row5 .advert-zone{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 10%;
+    margin-top: 6rem;
+    height: 90%;
+}
+.row5 .advert-zone img{
+    width: 98%;
+    height: 95%;
+    margin-top: .5rem;
+}
+
+
+
+.footer{
+    background: #0C4B6E;
+    display: grid;
+    padding: 3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 3rem;
+}
+.footer .footer-item p{
+    font-size: 1rem;
+    color: #fff;
+}
+.footer .footer-item{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.footer .footer-group h2{
+    color: #fff;
+    font-size: 2rem;
+}
+.footer .footer-item img{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-right: .5rem;
+}
+#loader{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    align-items: center;
+
+}
+#loader img{
+    position: fixed;
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
+    vertical-align: center;
+
+
+ 
+}
+
+
+
+
+/* row for adverts */
+.purenav{
+    display: none;
+    grid-template-columns: 2fr 1fr;
+    position: fixed;
+    z-index: 1 ;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+
+}
+.purenav .exiter{
+    background: #000;
+    opacity: 50%;
+}
+#hamburger img{
+    height: 20px;
+    width: 40px;
+    display: none;
+}
+.navMobile{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-bottom: 10px;
+    background: #f8f8f8;
+    padding-top: 20px;
+}
+.navMobile p{
+    font-size: 2rem;
+    margin-left: 10%;
+    margin-top: 2px;
+}
+
+
+
+@media only screen and (min-width:  0px) and (max-width: 860px){
+    *{
+        font-size: 14px;
+    }
+    .row5{
+        display: flex;
+
+    }
+    .row5 .news-sports-section .news-au-pair{
+        grid-template-columns: 1fr 1fr;
+    }
+    .row5 .advert-zone{
+        display: none;
+    }
+    #floaterMadeInRwanda{
+        position: fixed;
+        height: 0;
+        width: 0;
+        margin-left: 92.5%;
+        display: none;
+        animation-name: YAMAHA_ANIMEE;
+        animation-duration: 1s;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #hamburger img{
+        display: block;
+    }
+    
+    .row2{
+        display: none;
+    }
+    .row1{
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+    }
+    .row1 .advert{
+        width: 90%;
+    }
+    .row1 .hamburger{
+        margin-top: 15px;
+    }
+    #deepBlue{
+        display: none;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    *{
+        font-size: 12px;;
+    }
+        .row3{
+        display: flex;
+        flex-direction: column;
+    } 
+     .row3 .mainArticle{
+        height: 250px;
+        width: 100%;
+    }
+    .row1 .hamburger{
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    #hamburger img{
+        width: 20px;
+        height: 15px;
+    }
+    .row5 .news-sports-section .news-au-pair{
+        display: flex;
+        flex-direction: column;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 299px){
+    *{
+        font-size: 10px;
+    }
+    .row3{
+        display: flex;
+        flex-direction: column;
+    } 
+     .row3 .mainArticle{
+        height: 150px;
+        width: 100%;
+    }
+    .row3 .secondaryItems .secondaryRow{
+        display: none;
+    }
+    #hamburger img{
+        height: 10px;
+        width: 20px;
+        margin-top: 0px;
+    }
+    .row5 .news-sports-section .news-au-pair{
+        display: flex;
+        flex-direction: column;
+    }
+    .row5 .news-sports-section .news-au-sixth{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+</style>
 <body>
     <div class="content">
         <div class="purenav" id="pureNav">
@@ -26,7 +488,7 @@
             </div>
             <div class="exiter" onclick="closeBurger()"> </div>
            </div>
-        <div class="loader" id="loader"><p>Loading ...</p></div>
+           <div class="loader" id="loader"><img src="https://firebasestorage.googleapis.com/v0/b/intiti-website.appspot.com/o/687474703a2f2f692e696d6775722e636f6d2f637873543772532e676966.gif?alt=media&token=d401b4da-8f17-4586-aeea-a15cf1b1e330" alt=""></div>
 
         <div class="row1">
             <img class="advert"  src="../assets/images/intiti-white.png">
